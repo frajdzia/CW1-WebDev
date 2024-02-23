@@ -27,7 +27,9 @@ h2{
 }
 
 img{
-    width:25px;
+    width:50px;
+    display: flex;
+    justify-content:center;
 }
 
 nav{
