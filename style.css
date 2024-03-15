@@ -85,7 +85,7 @@ footer{
     text-align: center;  }
 
     ol li {
-		display: inline;
+		display: inline-block;
 		padding-right: 20px;
 		font-size: 18px;
 		}
