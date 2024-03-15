@@ -1,5 +1,5 @@
 body{
-    background-color: WhiteSmoke;
+    background-color:antiquewhite;
     font-family: 'Arial', sans-serif;
     margin: 30px;
     color: gray;
@@ -26,10 +26,14 @@ h2{
     padding: 3px;
 }
 
-img{
-    width:50px;
-    display: flex;
-    justify-content:center;
+#logo{
+    width:70px;
+    border-radius: 50%;
+    float:left;
+    position:relative;
+    display: inline;
+    margin-left: 45px;
+    margin-bottom: 12px;
 }
 
 nav{
@@ -38,7 +42,7 @@ nav{
     top:0;
     left:0;
     width:100%;
-    background-color: rgb(0, 85, 13);
+    background-color: #99BC85;
     padding:10px;
     text-align: center;
     z-index:2;
@@ -49,7 +53,7 @@ nav{
 
 nav a:link{
     color:green;
-    background-color: rgb(97, 255, 210);
+    background-color: #D4E7C5;
     text-decoration: none;
 
     padding: 10px 25px 10px 25px;
@@ -57,8 +61,8 @@ nav a:link{
 }
 
 nav a:hover{
-    color:darkgreen;
-    background-color: lightseagreen;
+    color:#E1F0DA;
+    background-color: #769365;
     padding: 10px 25px 10px 25px;
     border-radius: 25px;
 }
