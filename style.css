@@ -32,8 +32,9 @@ h2 {
     float: left;
     position: relative;
     display: inline;
-    margin-right: 45px;
-    /* margin-bottom: 12px; */
+    
+    float: left; /* Position the logo to the left */
+    margin-right: 10px; /* Adjust margin as needed */
 }
 
 nav {
@@ -81,13 +82,13 @@ footer {
     text-align: center;
 }
 
-ol li {
+nav ul {
+    float: right; /* Align the menu items to the right */
+    padding-right: 20px;
+}
+
+nav ul li {
     display: inline-block;
     padding-right: 10px;
     font-size: 18px;
-}
-
-ol {
-
-    text-align: center;
-}
+    text-align: center;}
