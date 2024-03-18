@@ -1,100 +1,93 @@
-body{
-    background-color:antiquewhite;
+body {
+    background-color: antiquewhite;
     font-family: 'Arial', sans-serif;
     margin: 30px;
     color: black;
 }
 
-main{
+main {
     margin-top: 90px;
     margin-bottom: 90px;
     margin-left: 30px;
-    z-index:1;
+    z-index: 1;
 }
 
-h1{
+h1 {
     padding: 80px;
     height: 2px;
     background-color: DarkTurquoise;
     text-align: center;
-    color:black;
+    color: black;
 }
 
-h2{
+h2 {
     color: black;
     background-color: DarkTurquoise;
     padding: 3px;
 }
 
-#logo{
-    width:70px;
+#logo {
+    width: 70px;
     border-radius: 50%;
-    float:left;
-    position:relative;
+    float: left;
+    position: relative;
     display: inline;
-    /* margin-left: 45px; */
+    margin-right: 45px;
     /* margin-bottom: 12px; */
 }
 
-nav{
-    position:fixed;
+nav {
+    position: fixed;
     display: inline;
-    top:0;
-    left:0;
-    width:100%;
-    background-image: url("./ai-generated-8273131_1280.png");
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("./pexels-photo-2453551.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #99BC85;
-    padding:80px 10px;
-    /* padding-right:45px; */
+    padding: 80px 10px;
     text-align: center;
-    z-index:2;
-    overflow: hidden; 
+    z-index: 2;
+    overflow: hidden;
     float: right;
     line-height: 3;
 }
 
-nav a:link{
-    color:green;
+nav a:link {
+    color: green;
     background-color: #D4E7C5;
     text-decoration: none;
-
-    padding: 10px 25px 10px 25px;
-    /* border-radius: 25px; */
+    padding: 10px 15px 10px 15px;
 }
 
-nav a:hover{
-    color:#E1F0DA;
+nav a:hover {
+    color: #E1F0DA;
     background-color: #769365;
-    padding: 10px 25px 10px 25px;
-    /* border-radius: 25px; */
+    padding: 10px 15px 10px 15px;
 }
 
-dl{
-    margin-left: 35px;
+a:visited {
+    color: darkolivegreen;
 }
 
-a:visited{
-    color:darkolivegreen;
-}
-
-footer{
+footer {
     position: fixed;
-    bottom:0;
-    left:0;
-    background-color:#D4E7C5;
+    bottom: 0;
+    left: 0;
+    background-color: #D4E7C5;
     width: 100%;
-    text-align: center;  }
+    text-align: center;
+}
 
-    ol li {
-		display: inline-block;
-		padding-right: 20px;
-		font-size: 18px;
-		}
+ol li {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 18px;
+}
 
-        ol{
-				
-            text-align: center;
-            }
+ol {
+
+    text-align: center;
+}
