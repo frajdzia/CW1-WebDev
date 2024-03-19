@@ -6,23 +6,23 @@ body {
 }
 
 main {
-    margin-top: 90px;
+    margin-top: 100px;
     margin-bottom: 90px;
     margin-left: 30px;
+    padding-top: 150px;
     z-index: 1;
 }
 
 h1 {
-    padding: 80px;
+    padding: 20px 20px 20px 20px;
     height: 2px;
-    background-color: DarkTurquoise;
     text-align: center;
     color: black;
 }
 
 h2 {
     color: black;
-    background-color: DarkTurquoise;
+    text-align: left;
     padding: 3px;
 }
 
@@ -47,7 +47,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #99BC85;
+    /* background-color: #99BC85; */
     padding: 80px 10px;
     text-align: center;
     z-index: 2;
@@ -57,16 +57,18 @@ nav {
 }
 
 nav a:link {
-    color: green;
-    background-color: #D4E7C5;
+    color: #FCFFCC;
+    font-weight: bold;
+    /* background-color: #D4E7C5; */
     text-decoration: none;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 5px 10px 5px;
 }
 
 nav a:hover {
     color: #E1F0DA;
-    background-color: #769365;
-    padding: 10px 15px 10px 15px;
+    /* background-color: #769365; */
+    font-weight: bold;
+    /* padding: 10px 15px 10px 15px; */
 }
 
 a:visited {
