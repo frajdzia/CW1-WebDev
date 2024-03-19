@@ -1,3 +1,5 @@
+/* BODY ----------------------- */
+
 body {
     background-color: antiquewhite;
     font-family: 'Arial', sans-serif;
@@ -5,26 +7,8 @@ body {
     color: black;
 }
 
-main {
-    margin-top: 100px;
-    margin-bottom: 90px;
-    margin-left: 30px;
-    padding-top: 150px;
-    z-index: 1;
-}
 
-h1 {
-    padding: 20px 20px 20px 20px;
-    height: 2px;
-    text-align: center;
-    color: black;
-}
-
-h2 {
-    color: black;
-    text-align: left;
-    padding: 3px;
-}
+/* NAVIGATION BAR ----------------------- */
 
 #logo {
     width: 70px;
@@ -32,23 +16,23 @@ h2 {
     float: left;
     position: relative;
     display: inline;
-    
-    float: left; /* Position the logo to the left */
-    margin-right: 20px; /* Adjust margin as needed */
+    float: left;
+    margin-right: 20px;
 }
 
 nav {
     position: fixed;
+    min-height: 0;
     display: inline;
     top: 0;
     left: 0;
     width: 100%;
-    background-image: url("./pexels-photo-2453551.jpeg");
+    background-image: url("./background1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     /* background-color: #99BC85; */
-    padding: 80px 10px;
+    padding: 40px 10px;
     text-align: center;
     z-index: 2;
     overflow: hidden;
@@ -75,22 +59,63 @@ a:visited {
     color: darkolivegreen;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #D4E7C5;
-    width: 100%;
-    text-align: center;
-}
 
 nav ul {
-    float: right; /* Align the menu items to the right */
+  margin-top:10px;
+    float: right;
     padding-right: 20px;
+    position:relative;
+    top:10%;
 }
 
 nav ul li {
+  position:relative;
+  top:10%;
     display: inline-block;
     padding-right: 10px;
     font-size: 18px;
     text-align: center;}
+
+
+/* MAIN PART OF WEBSITE ----------------------- */
+
+    main {
+        margin-top: 100px;
+        margin-bottom: 90px;
+        margin-left: 30px;
+        padding-top: 150px;
+        z-index: 1;
+    }
+
+#sitename{
+  padding:60px 20px 40px;
+  color:#D4E7C5;
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+    h1 {
+        padding: 20px 20px 20px 20px;
+        height: 2px;
+        text-align: center;
+        font-style: italic;
+        color: black;
+    }
+
+    h2 {
+        color: black;
+        text-align: left;
+    }
+
+
+/* FOOTER ----------------------- */
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #D4E7C5;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+    }
