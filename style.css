@@ -87,6 +87,7 @@ nav ul li {
         margin-left: 30px;
         padding-top: 150px;
         z-index: 1;
+        text-align: justify;
     }
 
 #sitename{
@@ -111,6 +112,29 @@ nav ul li {
     }
 
 
+    .container {
+        display: flex;
+      }
+      
+      .text-container {
+        flex: 2;
+      }
+
+      .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .image-container img {
+        width: calc(100% / 3); /* Set the width of the image to one-third of the container width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure the image is a block element */
+        margin: 0 auto; /* Center the image horizontally */
+      }
+
+
 /* FOOTER ----------------------- */
 
     footer {
@@ -119,5 +143,6 @@ nav ul li {
         background-color: #D4E7C5;
         width: 100%;
         text-align: center;
+        padding: 0px 0px;
         text-decoration: none;
     }
