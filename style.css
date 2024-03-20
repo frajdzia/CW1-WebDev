@@ -61,7 +61,10 @@ a:visited {
 
 nav a.active {
     color: #FCFFCC;
-    border-bottom-color: #FCFFCC; /* Color active page link and add border bottom */
+    border-bottom-width: 10px;
+    border-bottom-color: #FCFFCC;
+    text-decoration: underline;
+    /* Color active page link and add border bottom */
 }
 
 

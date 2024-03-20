@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var navLinks = document.querySelectorAll("nav ul li a");
     var mainContent = document.querySelector('main'); // Define mainContent globally
 
-    // Function to check if a link is active
+    // check if a link is active
     function checkActiveLink() {
         var currentHash = window.location.hash.substr(1); // Get the current hash without the '#' symbol
 
