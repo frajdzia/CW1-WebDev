@@ -14,11 +14,9 @@ body {
     width: 50px;
     border-radius: 50%;
     float: left;
+    margin-left: 25px;
     position: relative;
     display: inline;
-    float: left;
-    margin-top: 15px;
-    margin-right: 20px;
 }
 
 nav {
@@ -38,7 +36,6 @@ nav {
     z-index: 2;
     overflow: hidden;
     float: right;
-    line-height: 3;
 }
 
 nav a:link {
@@ -53,7 +50,6 @@ nav a:hover {
     color: #FCFFCC;
     /* background-color: #769365; */
     font-weight: bold;
-    /* padding: 10px 15px 10px 15px; */
 }
 
 a:visited {
@@ -65,7 +61,6 @@ nav a.active {
     border-bottom-width: 10px;
     border-bottom-color: #FCFFCC;
     text-decoration: underline;
-    /* Color active page link and add border bottom */
 }
 
 
@@ -91,9 +86,6 @@ nav ul li {
 
 main {
     min-height: 100vh;
-    /* Ensure content fills at least the height of the viewport */
-    padding-bottom: 50px;
-    /* Adjust this value to match the height of your footer */
     margin-top: 100px;
     margin-bottom: 90px;
     margin-right: 50px;
@@ -112,8 +104,9 @@ main {
 }
 
 h1 {
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 20px ;
     height: 2px;
+    margin-bottom: 50px;
     text-align: center;
     font-style: italic;
     color: black;
@@ -141,8 +134,7 @@ h2 {
 }
 
 .image-container img {
-    width: calc(100% / 3);
-    /* Set the width of the image to one-third of the container width */
+    width: 400px;
     height: auto;
     /* Maintain aspect ratio */
     display: block;
