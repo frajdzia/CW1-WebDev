@@ -59,6 +59,11 @@ a:visited {
     color: darkolivegreen;
 }
 
+nav a.active {
+    color: #FCFFCC;
+    border-bottom-color: #FCFFCC; /* Color active page link and add border bottom */
+}
+
 
 nav ul {
     margin-top: 10px;
