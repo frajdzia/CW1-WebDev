@@ -134,14 +134,10 @@ h2 {
 }
 
 .image-container img {
-    /* height:  ; */
     max-width: 50%;
-    /* Maintain aspect ratio */
     display: block;
-    /* Ensure the image is a block element */
     margin: 0 auto;
     margin-left: 30px;
-    /* Center the image horizontally */
 }
 
 

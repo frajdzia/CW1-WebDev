@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     var footer = document.getElementById('footer');
     var navLinks = document.querySelectorAll("nav ul li a");
-    var mainContent = document.querySelector('main'); // Define mainContent globally
+    var mainContent = document.querySelector('main'); 
 
     // check if a link is active
     function checkActiveLink() {
-        var currentHash = window.location.hash.substr(1); // Get the current hash without the '#' symbol
+        var currentHash = window.location.hash.substr(1);
 
         // Loop through each navigation link
         navLinks.forEach(function(link) {
-            var linkHash = link.getAttribute("href").substr(1); // Get the hash of the link without the '#' symbol
+            var linkHash = link.getAttribute("href").substr(1);
             
             // Check if the link's hash matches the current hash
             if (linkHash === currentHash) {
-                link.classList.add("active"); // Add the 'active' class to the link if it's active
+                link.classList.add("active"); 
             } else {
-                link.classList.remove("active"); // Remove the 'active' class from the link if it's not active
+                link.classList.remove("active"); 
             }
         });
     }
