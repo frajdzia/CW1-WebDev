@@ -160,6 +160,16 @@ h2 {
     display: flex;
 }
 
+.rounded-button{
+    padding: 10px 20px;
+  background-color: #86ABD4;
+  color: white;
+  border: solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
 
 /* FOOTER ----------------------- */
 
