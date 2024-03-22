@@ -153,10 +153,11 @@ h2 {
 }
 
 .content_pages img{
-    max-width: 50%;
+    max-width: 40%;
     display: block;
     margin: 0 auto;
     margin-left: 30px;
+    display: flex;
 }
 
 
