@@ -152,6 +152,13 @@ h2 {
     margin-left: 30px;
 }
 
+.content_pages img{
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-left: 30px;
+}
+
 
 /* FOOTER ----------------------- */
 
