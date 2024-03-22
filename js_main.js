@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // check if a link is active
     function checkActiveLink() {
-        var currentHash = window.location.hash.substr(1);
+        var currentHash = window.location.hash;
 
         // Loop through each navigation link
         navLinks.forEach(function(link) {
-            var linkHash = link.getAttribute("href").substr(1);
+            var linkHash = link.getAttribute("href");
             
             // Check if the link's hash matches the current hash
             if (linkHash === currentHash) {

@@ -160,15 +160,29 @@ h2 {
     display: flex;
 }
 
+#satisfactionScale label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 5px; /* Adjust spacing between buttons as needed */
+}
+
+#satisfactionScale input[type="radio"] {
+    margin-top: 4px;
+}
+
 .rounded-button{
-    padding: 10px 20px;
-  background-color: #86ABD4;
-  color: white;
+padding: 10px 20px;
+  background-color: #99BC85;
+  color: #E1F0DA;
   border: solid 1px;
   border-radius: 10px;
   cursor: pointer;
   float: right;
   margin-right: 10px;
+  font-weight: bold;
+
 }
 
 /* FOOTER ----------------------- */
