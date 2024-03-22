@@ -40,11 +40,11 @@ nav {
 
 nav a:link {
     color: #E1F0DA;
-    border-radius: 10px;
+    
     font-weight: bold;
     background-color:#769365 ;
     text-decoration: none;
-    padding: 10px 5px 10px;
+    padding: 10px 7px 10px;
 }
 
 nav a:hover {
@@ -64,13 +64,13 @@ nav a.active {
     text-decoration: underline;
 }
 
-
-nav ul {
-    margin-top: 10px;
-    float: right;
-    padding-right: 20px;
-    position: relative;
-    top: 10%;
+nav ul{
+    margin-top:10px;
+    display:flex;
+    float:right;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    padding-right: 40px;
 }
 
 nav ul li {
@@ -81,6 +81,17 @@ nav ul li {
     text-align: center;
 }
 
+nav ul li:first-child a {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+}
+
+nav ul li:last-child a {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 20px;
+}
 
 /* MAIN PART OF WEBSITE ----------------------- */
 
@@ -115,6 +126,7 @@ h1 {
 h2 {
     color: black;
     text-align: left;
+    margin-top: 50px;
 }
 
 
