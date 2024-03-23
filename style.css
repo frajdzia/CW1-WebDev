@@ -40,16 +40,15 @@ nav {
 
 nav a:link {
     color: #E1F0DA;
-    
     font-weight: bold;
-    background-color:#769365 ;
+    background-color:#88AB8E ;
     text-decoration: none;
     padding: 10px 7px 10px;
 }
 
 nav a:hover {
     color: #FCFFCC;
-    background-color: #bbdf9f;
+    background-color: #AFC8AD;
     font-weight: bold;
 }
 
@@ -171,18 +170,51 @@ h2 {
 #satisfactionScale input[type="radio"] {
     margin-top: 4px;
 }
+textarea{
+    display:inline-block;
+    background-color: #E1F0DA;
+    width: 250px;
+    height: 65px;
+}
+
+fieldset{
+    border: none;
+}
+
+#name, #email{
+    background-color: #E1F0DA;
+}
+
+#feedback_form{
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    background-color: #AFC8AD;
+    border-radius: 15px;
+}
+
+.separator{
+    display:block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#satisfaction_scale label{
+
+    display:inline-block;
+}
 
 .rounded-button{
 padding: 10px 20px;
-  background-color: #99BC85;
+  background-color: #88AB8E;
   color: #E1F0DA;
   border: solid 1px;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
   float: right;
-  margin-right: 10px;
   font-weight: bold;
-
+    margin-bottom: 2px;
 }
 
 /* FOOTER ----------------------- */
