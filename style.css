@@ -1,4 +1,4 @@
-/* BODY ----------------------- */
+/* BODY --------------------------------------------------------------------------------- */
 
 body {
     background-color: antiquewhite;
@@ -8,7 +8,7 @@ body {
 }
 
 
-/* NAVIGATION BAR ----------------------- */
+/* NAVIGATION BAR ----------------------------------------------------------------------- */
 
 #logo {
     width: 50px;
@@ -92,7 +92,7 @@ nav ul li:last-child a {
     padding-right: 20px;
 }
 
-/* MAIN PART OF WEBSITE ----------------------- */
+/* MAIN PART OF WEBSITE ----------------------------------------------------------------- */
 
 main {
     min-height: 100vh;
@@ -128,6 +128,60 @@ h2 {
     margin-top: 50px;
 }
 
+/* CONTENT PAGES ON HOME -----------------------------------------------------------------*/
+.content_container {
+    width: 100%;
+}
+
+.content_container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content_container ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.content_image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.content_image img {
+    max-width: 40%;
+    height: auto;
+}
+
+.content_middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content_container ul li:hover .content_image {
+    opacity: 0.5;
+}
+
+.content_container ul li:hover .content_middle {
+    opacity: 1;
+}
+
+.content_text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
 
 .container {
     display: flex;
@@ -144,6 +198,8 @@ h2 {
     align-items: center;
 }
 
+/* --------------------------------------------------------------------------------------------------*/
+
 .image-container img {
     max-width: 50%;
     display: block;
@@ -151,13 +207,6 @@ h2 {
     margin-left: 30px;
 }
 
-.content_pages img{
-    max-width: 40%;
-    display: block;
-    margin: 0 auto;
-    margin-left: 30px;
-    display: flex;
-}
 
 #satisfactionScale label {
     display: flex;
@@ -217,7 +266,7 @@ padding: 10px 20px;
     margin-bottom: 2px;
 }
 
-/* FOOTER ----------------------- */
+/* FOOTER -------------------------------------------------------------------------------------- */
 
 footer {
     bottom: 0;
