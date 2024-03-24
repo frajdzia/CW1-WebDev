@@ -26,7 +26,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-image: url("./1.png");
+    background-image: url("./nav_background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,6 +233,6 @@ footer ul li {
     top: 10%;
     display: inline-block;
     font-size: 18px;
-    
+
     text-align: center;
 }
