@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color: antiquewhite;
+            background-image: url(1.png) alt="image unavailable";
+            font-family: 'Arial', sans-serif;
+            margin: 30px;
+            color: black;
+        }
+        .form-step {
+          display: none;
+        }
+        .active-step {
+          display: inline-block; background: #99BC85; padding: 40px; 
+          height: 225px; width: 300px; border-radius: 40px; margin: 50px;
+        }
+      </style>
+</head>
+
+<body>
+    <div id="userProfile">
+        <div class="form-step active-step" id="step1">
+            <h2>Step 1: Basic Information</h2>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" readonly><br><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" readonly><br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" readonly><br><br>
+            <button onclick="getbasicinfo()">Answer</button>
+            <button onclick="nextStep()">Next</button>
+       </div>
+
+       <div class="form-step" id="step2">
+            <h2>Step 2: Contact Details</h2>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="eamil" readonly><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" readonly><br><br>
+            <label for="contact">Contact Method:</label>
+            <input type="text" id="contact" name="contact" readonly><br><br>
+            <button onclick="getcontactinfo()">Answer</button>
+            <button onclick="nextStep()">Next</button>
+       </div>
+        
+       <div class="form-step" id="step3">
+            <h2>Step 3: Address Details</h2>
+            <label for="houseno">House number:</label>
+            <input type="text" id="houseno" name="houseno" readonly><br><br>
+            <label for="streetname">Street Name:</label>
+            <input type="text" id="streetname" name="streetname" readonly><br><br>
+            <label for="postcode">Post Code:</label>
+            <input type="text" id="postcode" name="postcode" readonly><br><br>
+            <button onclick="getaddressinfo()">Answer</button>
+            <button onclick="submitForm()">Submit</button>
+       </div>
+
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = document.querySelectorAll('.form-step').length;
+      
+        function nextStep() {
+          if (currentStep < totalSteps) {
+            document.getElementById(`step${currentStep}`);
+            currentStep++;
+            document.getElementById(`step${currentStep}`).classList.add('active-step');
+          }
+        }
+      
+        function submitForm() {
+          // Here you can collect form data and perform further actions like sending it to the server
+          alert('Form submitted successfully!');
+        }
+
+        function getbasicinfo() {
+        var firstname = prompt("Please enter your firstname: ");
+        var lastname = prompt("Please enter your last name: ");
+        let dob = prompt("Please enter your date of birth: ");
+        document.getElementById("firstname").value = firstname;
+        document.getElementById("lastname").value = lastname;
+        document.getElementById("dob").value = dob;
+        }
+
+        function getcontactinfo() {
+        var email = prompt("Please enter your email address: ");
+        var phone = prompt("Please enter your phone number: ");
+        let contact = prompt("Please enter preferred contact method(email/phone/both): ");
+        document.getElementById("email").value = email;
+        document.getElementById("phone").value = phone;
+        document.getElementById("contact").value = contact;
+        }
+
+        function getaddressinfo() {
+        var houseno = prompt("Please enter your house number: ");
+        var streetname = prompt("Please enter your street name: ");
+        let postcode = prompt("Please enter your postcode: ");
+        document.getElementById("houseno").value = houseno;
+        document.getElementById("streetname").value = streetname;
+        document.getElementById("postcode").value = postcode;
+        }
+      </script>
+</body>
+</html>
