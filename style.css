@@ -11,7 +11,7 @@ body {
 /* NAVIGATION BAR ----------------------------------------------------------------------- */
 
 #logo {
-    width: 50px;
+    width: 40px;
     border-radius: 50%;
     float: left;
     margin-left: 25px;
@@ -40,9 +40,7 @@ nav {
 }
 
 #sitename {
-    padding: 60px 20px 40px;
     color: #D4E7C5;
-    margin-top: 20px;
     font-size: 60px;
     display: block;
     transition: padding 0.3s ease;
@@ -79,13 +77,11 @@ nav ul {
     display: flex;
     float: right;
     justify-content: space-evenly;
-    margin: 0px auto;
     padding-right: 40px;
 }
 
 nav ul li {
     position: relative;
-    top: 10%;
     display: inline-block;
     font-size: 18px;
     text-align: center;

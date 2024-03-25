@@ -6,10 +6,10 @@ function scrollFunction() {
     var sitename = document.getElementById("sitename");
     var navbar = document.querySelector("nav");
 
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 90) {
         navbar.style.padding= "10px 10px";
         sitename.style.padding= "0";
-        sitename.style.fontSize="0";
+        sitename.style.fontSize="20px";
     } else {
         navbar.style.padding= "40px 10px";
         sitename.style.padding= "40px";
