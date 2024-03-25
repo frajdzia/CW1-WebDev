@@ -138,9 +138,9 @@ h2 {
 .content_container ul {
     margin-top: 10px;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    padding: 0; /* Remove default padding */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
     list-style-type: none;
 }
 
