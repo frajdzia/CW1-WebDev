@@ -41,7 +41,7 @@ nav {
 nav a:link {
     color: #E1F0DA;
     font-weight: bold;
-    background-color:#6e9274 ;
+    background-color: #6e9274;
     text-decoration: none;
     padding: 10px 7px 10px;
 }
@@ -63,10 +63,10 @@ nav a.active {
     text-decoration: underline;
 }
 
-nav ul{
-    margin-top:10px;
-    display:flex;
-    float:right;
+nav ul {
+    margin-top: 10px;
+    display: flex;
+    float: right;
     justify-content: space-evenly;
     margin: 0px auto;
     padding-right: 40px;
@@ -114,7 +114,7 @@ main {
 }
 
 h1 {
-    padding: 20px 20px 20px ;
+    padding: 20px 20px 20px;
     height: 2px;
     margin-bottom: 50px;
     text-align: center;
@@ -135,6 +135,7 @@ h2 {
     overflow-x: auto;
     white-space: nowrap;
 }
+
 .content_container ul {
     margin-top: 10px;
     display: flex;
@@ -219,28 +220,35 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 5px; /* Adjust spacing between buttons as needed */
+    margin: 0 5px;
+}
+
+.feedback_title{
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #satisfactionScale input[type="radio"] {
     margin-top: 4px;
 }
-textarea{
-    display:inline-block;
+
+textarea {
+    display: inline-block;
     background-color: #E1F0DA;
     width: 250px;
     height: 65px;
 }
 
-fieldset{
+fieldset {
     border: none;
 }
 
-#name, #email{
+#name,
+#email {
     background-color: #E1F0DA;
 }
 
-#feedback_form{
+#feedback_form {
     align-items: center;
     text-align: center;
     display: inline-block;
@@ -249,27 +257,40 @@ fieldset{
     border-radius: 15px;
 }
 
-.separator{
-    display:block;
+.separator {
+    display: block;
     width: 100%;
     margin-bottom: 20px;
 }
 
-#satisfaction_scale label{
-
-    display:inline-block;
+#satisfaction_scale label {
+    display: inline-block;
 }
 
-.rounded-button{
-padding: 10px 20px;
-  background-color: #88AB8E;
-  color: #E1F0DA;
-  border: solid 1px;
-  border-radius: 15px;
-  cursor: pointer;
-  float: right;
-  font-weight: bold;
+.rounded-button {
+    padding: 10px 20px;
+    background-color: #88AB8E;
+    color: #E1F0DA;
+    border: solid 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
     margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.rounded-button:hover {
+    padding: 10px 20px;
+    border: solid 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #FCFFCC;
+    background-color: #759572;
+    font-weight: bold;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
@@ -288,6 +309,21 @@ footer ul li {
     top: 10%;
     display: inline-block;
     font-size: 18px;
-
     text-align: center;
+}
+
+footer a:link {
+    color: #6e9274;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FCFFCC;
+    background-color: #AFC8AD;
+    font-weight: bold;
+}
+
+footer a:visited {
+    color: #E1F0DA;
 }
