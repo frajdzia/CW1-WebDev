@@ -9,7 +9,7 @@ function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 90) {
         navbar.style.padding= "10px 10px";
         sitename.style.padding= "0";
-        sitename.style.fontSize="20px";
+        sitename.style.fontSize="0px";
     } else {
         navbar.style.padding= "40px 10px";
         sitename.style.padding= "40px";

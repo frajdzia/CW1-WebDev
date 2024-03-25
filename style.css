@@ -27,10 +27,10 @@ nav {
     left: 0;
     width: 100%;
     background-image: url("./nav_background.png");
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #99BC85;
+    /* background-color: #99BC85; */
     padding: 40px 10px;
     text-align: center;
     z-index: 2;
@@ -298,6 +298,11 @@ fieldset {
     margin-bottom: 12px;
 }
 
+#page_editor{
+    width:400px;
+    height: auto;
+}
+
 /* FOOTER -------------------------------------------------------------------------------------- */
 
 footer {
@@ -327,8 +332,4 @@ footer a:hover {
     color: #FCFFCC;
     background-color: #AFC8AD;
     font-weight: bold;
-}
-
-footer a:visited {
-    color: #E1F0DA;
 }
