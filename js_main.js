@@ -1,3 +1,23 @@
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    var sitename = document.getElementById("sitename");
+    var navbar = document.querySelector("nav");
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 100) {
+        navbar.style.padding= "10px 10px";
+        sitename.style.padding= "0";
+        sitename.style.fontSize="0";
+    } else {
+        navbar.style.padding= "40px 10px";
+        sitename.style.padding= "40px";
+        sitename.style.fontSize="60px";
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
     var footer = document.getElementById('footer');
     var navLinks = document.querySelectorAll("nav ul li a");

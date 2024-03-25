@@ -36,7 +36,18 @@ nav {
     z-index: 2;
     overflow: hidden;
     float: right;
+    transition: padding 0.3s ease;
 }
+
+#sitename {
+    padding: 60px 20px 40px;
+    color: #D4E7C5;
+    margin-top: 20px;
+    font-size: 60px;
+    display: block;
+    transition: padding 0.3s ease;
+}
+
 
 nav a:link {
     color: #E1F0DA;
@@ -105,13 +116,6 @@ main {
     text-align: justify;
 }
 
-#sitename {
-    padding: 60px 20px 40px;
-    color: #D4E7C5;
-    margin-top: 20px;
-    font-size: 60px;
-    display: block;
-}
 
 h1 {
     padding: 20px 20px 20px;
@@ -291,6 +295,11 @@ fieldset {
     color: #FCFFCC;
     background-color: #759572;
     font-weight: bold;
+}
+
+#climate_changes_list li {
+    list-style-type: decimal;
+    margin-bottom: 12px;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
