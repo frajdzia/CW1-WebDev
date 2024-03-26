@@ -47,7 +47,6 @@ nav {
     transition: padding 0.3s ease;
 }
 
-
 nav a:link {
     color: #E1F0DA;
     font-weight: bold;
@@ -56,17 +55,17 @@ nav a:link {
     padding: 10px 7px 10px;
 }
 
+nav a:visited {
+    color: #E1F0DA;
+}
+
 nav a:hover {
     color: #FCFFCC;
     background-color: #AFC8AD;
     font-weight: bold;
 }
 
-a:visited {
-    color: #E1F0DA;
-}
-
-nav a.active {
+.active {
     color: #FCFFCC;
     border-bottom: 3px solid #FCFFCC;
     border-bottom-color: #FCFFCC;
