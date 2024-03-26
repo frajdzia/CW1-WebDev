@@ -68,7 +68,7 @@ a:visited {
 
 nav a.active {
     color: #FCFFCC;
-    border-bottom-width: 10px;
+    border-bottom: 3px solid #FCFFCC;
     border-bottom-color: #FCFFCC;
     text-decoration: underline;
 }

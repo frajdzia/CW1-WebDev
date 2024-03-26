@@ -1,57 +1,37 @@
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    let sitename = document.getElementById("sitename");
-    let navbar = document.querySelector("nav");
-
-    if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
-        navbar.style.padding= "10px 10px";
-        sitename.style.padding= "0";
-        sitename.style.fontSize="0px";
-    } else {
-        navbar.style.padding= "40px 10px";
-        sitename.style.padding= "40px";
-        sitename.style.fontSize="60px";
-    }
-}
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    let footer = document.getElementById('footer');
-    let navLinks = document.querySelectorAll("nav ul li a");
-    let mainContent = document.querySelector('main'); 
+    const footer = document.getElementById('footer');
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const mainContent = document.querySelector('main');
+    const sitename = document.getElementById("sitename");
+    const navbar = document.querySelector("nav");
 
-    // check if a link is active
-    function checkActiveLink() {
-        let currentHash = window.location.hash;
+    // Adjust the navbar and sitename based on the scroll position
+    function scrollFunction() {
+        if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
+            navbar.style.padding = "10px 10px";
+            sitename.style.padding = "0";
+            sitename.style.fontSize = "0px";
+        } else {
+            navbar.style.padding = "40px 10px";
+            sitename.style.padding = "40px";
+            sitename.style.fontSize = "60px";
+        }
+    }
 
-        // Loop through each navigation link
-        navLinks.forEach(function(link) {
-            let linkHash = link.getAttribute("href");
-            
-            // Check if the link's hash matches the current hash
-            if (linkHash === currentHash) {
-                link.classList.add("active"); 
+    // Function to underline the current active link
+    function underlineActiveLink() {
+        // Get the current URL path
+        const currentPath = window.location.pathname.split('/').pop();
+
+        // Iterate over each link and add the 'active' class if the href matches the currentPath
+        navLinks.forEach(link => {
+            if(link.getAttribute("href") === currentPath) {
+                link.classList.add("active");
             } else {
-                link.classList.remove("active"); 
+                link.classList.remove("active");
             }
         });
     }
-
-    // Call the checkActiveLink function on page load and whenever the hash changes
-    window.addEventListener("load", function() {
-        checkActiveLink();
-        footerVisibility();
-    });
-    window.addEventListener("hashchange", checkActiveLink);
-
-    // Call the underlineCurrentLink function on page load and scroll
-    window.addEventListener("scroll", function() {
-        checkActiveLink();
-        footerVisibility();
-    });
 
     // Function to show/hide footer based on scroll position
     function footerVisibility() {
@@ -61,4 +41,14 @@ document.addEventListener("DOMContentLoaded", function() {
             footer.style.display = 'none';
         }
     }
+
+    // Call the scrollFunction on scroll
+    window.onscroll = function() {
+        scrollFunction();
+        footerVisibility(); // Also check the footer visibility on scroll
+    };
+
+    // Initial calls to set up the page
+    underlineActiveLink(); // Check and underline the active link
+    footerVisibility(); // Check the initial state of the footer visibility
 });
