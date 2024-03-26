@@ -3,10 +3,10 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-    var sitename = document.getElementById("sitename");
-    var navbar = document.querySelector("nav");
+    let sitename = document.getElementById("sitename");
+    let navbar = document.querySelector("nav");
 
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 90) {
+    if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
         navbar.style.padding= "10px 10px";
         sitename.style.padding= "0";
         sitename.style.fontSize="0px";
@@ -19,17 +19,17 @@ function scrollFunction() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    var footer = document.getElementById('footer');
-    var navLinks = document.querySelectorAll("nav ul li a");
-    var mainContent = document.querySelector('main'); 
+    let footer = document.getElementById('footer');
+    let navLinks = document.querySelectorAll("nav ul li a");
+    let mainContent = document.querySelector('main'); 
 
     // check if a link is active
     function checkActiveLink() {
-        var currentHash = window.location.hash;
+        let currentHash = window.location.hash;
 
         // Loop through each navigation link
         navLinks.forEach(function(link) {
-            var linkHash = link.getAttribute("href");
+            let linkHash = link.getAttribute("href");
             
             // Check if the link's hash matches the current hash
             if (linkHash === currentHash) {

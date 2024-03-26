@@ -42,6 +42,7 @@ nav {
 #sitename {
     color: #D4E7C5;
     font-size: 60px;
+    padding: 40px;
     display: block;
     transition: padding 0.3s ease;
 }
@@ -322,7 +323,7 @@ footer ul li {
     text-align: center;
 }
 
-footer a:link {
+footer a:link,footer a:visited {
     color: #6e9274;
     font-weight: bold;
     text-decoration: none;
