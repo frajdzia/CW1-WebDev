@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Checkout</title>
+    <style>
+       
+        /* Your CSS styles here */
+        .thank-you-message {
+            display: none;
+        }
+
+        /* Show the thank you message when the URL has #thank-you appended to it */
+        .thank-you-message:target {
+            display: block;
+        }    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        h1#sitename {
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            max-width: 400px; /* Decreased width */
+            margin: 20px auto; /* Added margin to center vertically */
+            background-color: #ffffff;
+            padding: 80px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 20px); /* Adjusted width to account for padding */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+        <!-- NAVIGATION BAR SECTION -->
+    <nav>
+        <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
+        </div>
+        <ul>
+            <li><a href="./home.html" id="home">Home</a></li>
+            <li><a href="./gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="./shop.html" id="shop">Shop</a></li>
+            <li><a href="./profile.html" id="profile">User profile</a></li>
+            <li><a href="./feedback.html" id="feedback">Feedback</a></li>
+            <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
+            <li><a href="./team.html" id="team">Team</a></li>
+        </ul>
+        <h1 id="sitename">Climate Action</h1>
+    </nav>
+    <!-- END OF NAVIGATION BAR SECTION -->
+
+    <h1>Checkout</h1>
+    <form action="#thank-you" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <input type="submit" value="Place Order">
+    </form>
+
+    <!-- Thank You message -->
+    <div id="thank-you" class="thank-you-message">
+        <h2>Thank You!</h2>
+        <p>Your order has been placed. Thank you for your purchase!</p>
+    </div>
+
+</body>
+</html>
