@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Shop</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px 0;
+        }
+
+        .product-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-bottom: 120px; /* Added margin to prevent overlap with order summary */
+        }
+
+        .product {
+            width: 200px; /* Adjust width as needed */
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .product img {
+            width: 58%;
+            height: 180px; /* Fixed height to ensure all images have the same dimensions */
+            object-fit: cover; /* Preserve aspect ratio */
+
+        }
+
+        .product select, .product button {
+            margin-top: 10px;
+        }
+
+        .order-summary {
+            background-color: #f9f9f9;
+            padding: 20px;
+            width: 250px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover {
+            background-color: #45a049;
+        }
+
+        .basket {
+            margin-bottom: 20px;
+        }
+
+        .total-price {
+            font-weight: bold;
+        }
+
+        .remove-item {
+            color: rgb(168, 17, 17);
+            cursor: pointer;
+        }
+
+        
+
+        <!-- @media only screen and (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px); /* Adjust width to fit two products per row */
+                max-width: calc(50% - 40px); /* Adjust maximum width of the image */
+            }
+        
+            .product-showcase {
+                justify-content: flex-start; /* Ensure products start from the beginning of the row */
+            }
+        } -->
+        
+            
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR SECTION -->
+    <nav>
+        <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
+        </div>
+        <ul>
+            <li><a href="home.html" id="home">Home</a></li>
+            <li><a href="gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="shop.html" id="shop">Shop</a></li>
+            <li><a href="profile.html" id="profile">User profile</a></li>
+            <li><a href="feedback.html" id="feedback">Feedback</a></li>
+            <li><a href="sitemap.html" id="sitemap">Sitemap</a></li>
+            <li><a href="team.html" id="team">Team</a></li>
+        </ul>
+        <h1 id="sitename">Climate Action</h1>
+    </nav>
+    <!-- END OF NAVIGATION BAR SECTION -->
+
+    <header>
+        <h1>Product Showcase</h1>
+    </header>
+
+    <div class="product-showcase">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="water_bottle.png" alt="Product 1">
+            <h2> Reusable Water Bottle </h2>
+            <p>Description of Product 1</p>
+            <p class="price">£10.00</p>
+            <select name="product1-options">
+                <option value="default">Select Option</option>
+                <option value="option1"> Light Green </option>
+                <option value="option2"> White </option>
+                <!-- Add more options if needed -->
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="lunchbox_bamboo.png" alt="Product 2">
+            <h2> Bamboo Lunchbox </h2>
+            <p>
+                Glass 800 ml Lunchbox Bamboo Lid.
+            </p>
+
+            <p class="price">£15.00</p>
+            <select name="product2-options">
+                <option value="default">Select Option</option>
+                <option value="option1">100ml</option>
+                <option value="option2">200ml</option>
+                <!-- Add more options if needed -->
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="bento_lunchbox_spork.png" alt="Product 3">
+            <h2>Bento Lunchbox </h2>
+            <p>- Made from durable and environmentally friendly PP plastic
+               - Includes a 3-in-1 fork, spoon, and knife</p>
+            <p class="price">£20.00</p>
+            <select name="product3-options">
+                <option value="default">Select Option</option>
+                <option value="option1">Small</option>
+                <option value="option2">Medium</option>
+                <option value="option3">Large</option>
+                <!-- Add more options if needed -->
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="stainless_steel_lunchbox.png" alt="Product 4">
+            <h2>Stainless Steel Lunchbox</h2>
+            <p>Description of Product 4</p>
+            <p class="price">£25.00</p>
+            <select name="product4-options">
+                <option value="default">Select Option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <!-- Add more options if needed -->
+            </select>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- More products can be added similarly -->
+
+    </div>
+
+    <aside class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="basket">
+            <p>Your Basket:</p>
+            <ul>
+                <!-- Selected items will be dynamically added here -->
+            </ul>
+            <p>Total: <span class="total-price">£0.00</span></p>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+            const basket = document.querySelector(".basket ul");
+            const totalPrice = document.querySelector(".total-price");
+            const checkoutBtn = document.querySelector(".checkout-btn");
+    
+            let total = 0;
+    
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const product = this.parentNode;
+                    const productName = product.querySelector("h2").textContent;
+                    const productPrice = parseFloat(product.querySelector(".price").textContent.replace("£", "")).toFixed(2);
+                    total += parseFloat(productPrice);
+    
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${productName} - £${productPrice}`;
+                    basket.appendChild(listItem);
+    
+                    totalPrice.textContent = `£${total.toFixed(2)}`;
+    
+                    // Add event listener to remove the item when clicked
+                    const removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+                    removeButton.className = "remove-item";
+                    removeButton.addEventListener("click", function() {
+                        total -= parseFloat(productPrice);
+                        totalPrice.textContent = `£${total.toFixed(2)}`;
+                        listItem.remove();
+                    });
+                    listItem.appendChild(removeButton);
+                });
+            });
+            <button class="checkout-btn"><a href="checkout.html">Proceed to Checkout</a></button>    
+            checkoutBtn.addEventListener("click", function() {
+                const items = document.querySelectorAll(".basket li");
+                const orderSummary = document.querySelector(".order-summary");
+                const feedback = document.createElement("p");
+                if (items.length === 0) {
+                    feedback.textContent = "Your basket is empty. Please add some items before proceeding to checkout.";
+                } else {
+                    orderSummary.innerHTML = "<h2>Order Summary</h2><p>Your Basket:</p><ul></ul><p>Total: <span class='total-price'>£0.00</span></p>";
+                    feedback.textContent = "Checkout successful. Thank you for your purchase!";
+                }
+                orderSummary.appendChild(feedback);
+                totalPrice.textContent = "£0.00";
+                total = 0;
+            });
+        });
+    </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+            const basket = document.querySelector(".basket ul");
+            const totalPrice = document.querySelector(".total-price");
+            const checkoutBtn = document.querySelector(".checkout-btn");
+    
+            let total = 0;
+    
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    const product = this.parentNode;
+                    const productName = product.querySelector("h2").textContent;
+                    const productPrice = parseFloat(product.querySelector(".price").textContent.replace("£", "")).toFixed(2);
+                    total += parseFloat(productPrice);
+    
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${productName} - £${productPrice}`;
+                    basket.appendChild(listItem);
+    
+                    totalPrice.textContent = `£${total.toFixed(2)}`;
+    
+                    // Add event listener to remove the item when clicked
+                    const removeButton = document.createElement("button");
+                    removeButton.textContent = "Remove";
+                    removeButton.className = "remove-item";
+                    removeButton.addEventListener("click", function() {
+                        total -= parseFloat(productPrice);
+                        totalPrice.textContent = `£${total.toFixed(2)}`;
+                        listItem.remove();
+                    });
+                    listItem.appendChild(removeButton);
+                });
+            });
+    
+            checkoutBtn.addEventListener("click", function() {
+                window.location.href = "checkout.html"; // Redirect to checkout.html
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
