@@ -104,7 +104,7 @@ nav ul li:last-child a {
 main {
     min-height: 100vh;
     margin-top: 100px;
-    margin-bottom: 90px;
+    padding-bottom: 120px; 
     margin-right: 50px;
     margin-left: 50px;
     padding-top: 150px;
@@ -304,32 +304,47 @@ fieldset {
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
-
 footer {
+    position: fixed;
+    margin-top: 30px;
     bottom: 0;
     left: 0;
     background-color: #D4E7C5;
     width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-decoration: none;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+footer ul {
+    list-style: none; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 footer ul li {
-    position: relative;
-    top: 10%;
-    display: inline-block;
+    margin: 0 10px; 
     font-size: 18px;
-    text-align: center;
 }
 
-footer a:link,footer a:visited {
+footer a:link, footer a:visited {
     color: #6e9274;
     font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 footer a:hover {
     color: #FCFFCC;
     background-color: #AFC8AD;
+    padding: 3px 5px;
+    border-radius: 5px;
     font-weight: bold;
 }
