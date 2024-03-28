@@ -312,7 +312,7 @@ footer {
     background-color: #D4E7C5;
     width: 100%;
     padding: 10px 0;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
