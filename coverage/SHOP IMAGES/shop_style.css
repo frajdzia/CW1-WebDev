@@ -1,0 +1,132 @@
+.small-navbar {
+    height: 50px; /* Adjust the height as needed */
+    transition: height 0.3s; /* Add smooth transition effect */
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px 0;
+}
+
+.product-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 120px; /* Added margin to prevent overlap with order summary */
+}
+
+.product {
+    width: 100px; /* Adjust width as needed */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.product img {
+    width: 29%;
+    height: 90px; /* Fixed height to ensure all images have the same dimensions */
+    object-fit: cover; /* Preserve aspect ratio */
+
+}
+
+.product select, .product button {
+    margin-top: 10px;
+}
+
+.order-summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    height: auto; /* Change height to auto */
+    overflow-y: auto;
+    margin-top: 20px; /* Adjust margin to create space between the content and the order summary */
+    margin-left: auto; /* Center the order summary horizontally */
+    margin-right: auto;
+    text-align: center; /* Center the content */
+
+}
+    <!-- background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+} -->
+
+.checkout-btn {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+
+.basket {
+    margin-bottom: 20px;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+.remove-item {
+    color: rgb(168, 17, 17);
+    cursor: pointer;
+}
+
+        Styles for the large navigation bar
+        #navbar-large {
+            background-color: #333;
+            color: white;
+            height: 80px; /* Adjust height as needed */
+            transition: height 0.3s; /* Smooth transition effect */
+        }
+
+        /* Styles for the small navigation bar */
+        #navbar-small {
+            background-color: #333;
+            color: white;
+            height: 40px; /* Adjust height as needed */
+            display: none; /* Initially hidden */
+        }
+
+        /* Show small navigation bar when scrolling */
+        body.scrolled #navbar-small {
+            display: block;
+        }
+
+        /* Hide large navigation bar when scrolling */
+        body.scrolled #navbar-large {
+            display: none;
+        }
+s
+        /* Styles for the navigation links */
+        #navbar-large a, #navbar-small a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+        }
+
+
+
+
+    
