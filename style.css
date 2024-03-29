@@ -30,7 +30,6 @@ nav {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #99BC85; */
     padding: 40px 10px;
     text-align: center;
     z-index: 2;
@@ -47,16 +46,12 @@ nav {
     transition: padding 0.3s ease;
 }
 
-nav a:link {
+nav a:link, nav a:visited {
     color: #E1F0DA;
     font-weight: bold;
     background-color: #6e9274;
     text-decoration: none;
     padding: 10px 7px 10px;
-}
-
-nav a:visited {
-    color: #E1F0DA;
 }
 
 nav a:hover {
@@ -111,7 +106,6 @@ main {
     z-index: 1;
     text-align: justify;
 }
-
 
 h1 {
     padding: 20px 20px 20px;
@@ -199,7 +193,7 @@ h2 {
     text-shadow:
     -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,1px 1px 0 #fff;
   }
-/* --------------------------------------------------------------------------------------------------*/
+/* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
 
 .container {
     display: flex;
@@ -222,7 +216,6 @@ h2 {
     margin: 0 auto;
     margin-left: 30px;
 }
-
 
 #satisfactionScale label {
     display: flex;
@@ -302,17 +295,13 @@ fieldset {
     font-weight: bold;
 }
 
-#climate_changes_list li {
-    list-style-type: decimal;
-    margin-bottom: 12px;
-}
-
 #page_editor{
     width:400px;
     height: auto;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
+
 footer {
     position: fixed;
     margin-top: 30px;
