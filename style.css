@@ -299,9 +299,16 @@ fieldset {
 
 /* ------------------------------------------------------------------------------------------------*/
 
-#page_editor{
-    width:400px;
+#page_editor img {
+    float: right;
+    margin-left: 20px;
+    width: 600px;
     height: auto;
+}
+
+#editor_text{
+    text-align: justify;
+            font-size: 18px;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */

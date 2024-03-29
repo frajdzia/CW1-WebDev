@@ -39,14 +39,14 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                     <span class="separator"></span>
                     <fieldset>
-                        <legend>Have you visited our website before?</legend>
-                        <label><input type="radio" name="visited" value="yes"> Yes</label>
+                        <legend>*Have you visited our website before?</legend>
+                        <label><input type="radio" name="visited" value="yes" required> Yes</label>
                         <label><input type="radio" name="visited" value="no"> No</label>
                     </fieldset>
                     <span class="separator"></span>
                     <fieldset>
-                        <legend>Was this website informative and easy to navigate?</legend>
-                        <label><input type="radio" name="navigation" value="yes"> Yes</label>
+                        <legend>*Was this website informative and easy to navigate?</legend>
+                        <label><input type="radio" name="navigation" value="yes" required> Yes</label>
                         <label><input type="radio" name="navigation" value="no"> No</label>
                     </fieldset>
                     <span class="separator"></span>
@@ -54,9 +54,9 @@
                     <textarea id="suggestions" name="suggestions" placeholder="Add your message here..."></textarea>
                     <span class="separator"></span>
                     <fieldset>
-                        <legend>How satisfied are you with our services?</legend>
+                        <legend>*How satisfied are you with our services?</legend>
                         <div id="satisfaction_scale">
-                            <label for="r1">1<input type="radio" name="satisfaction" id="r1" value="1"></label>
+                            <label for="r1">1<input type="radio" name="satisfaction" id="r1" value="1" required></label>
                             <label for="r2">2<input type="radio" name="satisfaction" id="r2" value="2"></label>
                             <label for="r3">3<input type="radio" name="satisfaction" id="r3" value="3"></label>
                             <label for="r4">4<input type="radio" name="satisfaction" id="r4" value="4"></label>
@@ -69,8 +69,11 @@
                         </div>
                     </fieldset>
                     <span class="separator"></span>
-                    <label for="updates">Would you like to receive updates about the website or any offers:</label><br>
-                    <textarea id="updates" name="updates" placeholder="Add your message here..."></textarea>
+                    <label for="updates">*Would you like to receive updates about the website or any offers:</label><br>
+                    <select name="updates" id="updates" required>
+                        <option value="Yes - by email" selected>Yes - by email</option>
+                        <option value="No">No</option>
+                    </select>
                     <span class="separator"></span>
                     <label for="questions">Aditional questions or requests: </label><br>
                     <textarea id="questions" name="questions" placeholder="Add your message here..."></textarea>
