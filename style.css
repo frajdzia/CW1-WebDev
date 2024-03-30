@@ -46,7 +46,8 @@ nav {
     transition: padding 0.3s ease;
 }
 
-nav a:link, nav a:visited {
+nav a:link,
+nav a:visited {
     color: #E1F0DA;
     font-weight: bold;
     background-color: #6e9274;
@@ -99,7 +100,7 @@ nav ul li:last-child a {
 main {
     min-height: 100vh;
     margin-top: 100px;
-    padding-bottom: 120px; 
+    padding-bottom: 120px;
     margin-right: 50px;
     margin-left: 50px;
     padding-top: 150px;
@@ -184,6 +185,7 @@ h2 {
     font-size: 16px;
     width: 350px;
 }
+
 .top-left {
     position: absolute;
     top: 8px;
@@ -191,26 +193,27 @@ h2 {
     font-weight: bold;
     font-size: 18px;
     text-shadow:
-    -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,1px 1px 0 #fff;
-  }
+        -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
 
 /* ------------------------------------------------------------------------------------------------*/
 
 #left_side img {
     float: left;
     margin-right: 20px;
-    width: 200px;
+    max-width: 20%;
     height: auto;
 }
 
-#right_side img{
-        float: right;
-        margin-left: 20px;
-        width: 600px;
-        height: auto;
+#right_side img {
+    float: right;
+    margin-left: 20px;
+    max-width: 40%;
+    min-width: 30%;
+    height: auto;
 }
 
-#editor_text{
+#editor_text {
     text-align: justify;
 }
 
@@ -224,7 +227,7 @@ h2 {
     margin: 0 5px;
 }
 
-.feedback_title{
+.feedback_title {
     font-weight: bold;
     font-size: 18px;
 }
@@ -294,6 +297,22 @@ fieldset {
     font-weight: bold;
 }
 
+
+/* PAGE EDITOR STUDENT 2 ------------------------------------------------------------------------ */
+
+.page_editor_links a:link,
+.page_editor_links a:visited {
+    color: #42664f;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 7px 10px;
+}
+
+.page_editor_links a:hover {
+    color: #87b28e;
+    font-weight: bold;
+}
+
 /* FOOTER -------------------------------------------------------------------------------------- */
 
 footer {
@@ -309,11 +328,11 @@ footer {
     align-items: center;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 footer ul {
-    list-style: none; 
+    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -322,12 +341,13 @@ footer ul {
 }
 
 footer ul li {
-    margin: 0 10px; 
+    margin: 0 10px;
     font-size: 18px;
     font-weight: bold;
 }
 
-footer a:link, footer a:visited {
+footer a:link,
+footer a:visited {
     color: #6e9274;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
