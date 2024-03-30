@@ -193,31 +193,28 @@ h2 {
     text-shadow:
     -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,1px 1px 0 #fff;
   }
+
+/* ------------------------------------------------------------------------------------------------*/
+
+#left_side img {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+}
+
+#right_side img{
+        float: right;
+        margin-left: 20px;
+        width: 600px;
+        height: auto;
+}
+
+#editor_text{
+    text-align: justify;
+}
+
 /* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
-
-.container {
-    display: flex;
-}
-
-.text-container {
-    flex: 2;
-}
-
-.image-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.image-container img {
-    max-width: 50%;
-    display: block;
-    margin: 0 auto;
-    margin-left: 30px;
-}
-
-/* ----------------------------------------------------------------------------------------*/
 
 #satisfactionScale label {
     display: flex;
@@ -295,20 +292,6 @@ fieldset {
     color: #FCFFCC;
     background-color: #759572;
     font-weight: bold;
-}
-
-/* ------------------------------------------------------------------------------------------------*/
-
-#page_editor img {
-    float: right;
-    margin-left: 20px;
-    width: 600px;
-    height: auto;
-}
-
-#editor_text{
-    text-align: justify;
-            font-size: 18px;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
