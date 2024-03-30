@@ -1,109 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body { background-color: antiquewhite;
-            background-image: url(nav_background.png) alt="image unavailable";
-            font-family: 'Arial', sans-serif;
-            margin: 30px;
-            color: black;
-        }
-        .form-step {
-          display: none;
-        }
-        .active-step {
-          display: inline-block; background: #99BC85; padding: 40px; 
-          height: 225px; width: 300px; border-radius: 40px; margin: 50px;
-        }
-      </style>
-</head>
+    <head>
+        <title>User profile</title>
+        <meta charset="UTF-8">
+        <link href="profile.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
+            </div>
+            <ul>
+                <li><a href="./home.html" id="home">Home</a></li>
+                <li><a href="./gallery.html" id="gallery">Gallery</a></li>
+                <li><a href="./shop.html" id="shop">Shop</a></li>
+                <li><a href="./profile.html" id="profile">User profile</a></li>
+                <li><a href="./feedback.html" id="feedback">Feedback</a></li>
+                <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
+                <li><a href="./team.html" id="team">Team</a></li>
+            </ul>
+            <h1 id="sitename">User Profile</h1>
+        </nav>
 
-<body>
-    <div id="userProfile">
-        <div class="form-step active-step" id="step1">
-            <h2>Step 1: Basic Information</h2>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" readonly><br><br>
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" readonly><br><br>
-            <label for="dob">Date of Birth:</label>
-            <input type="text" id="dob" name="dob" readonly><br><br>
-            <button onclick="getbasicinfo()">Answer</button>
-            <button onclick="nextStep()">Next</button>
-       </div>
+        <div id="main">
+            <div>
+                <h1>Press the button below to fill out details about your profile!</h1>
+                <div class="prompt-button" id="start-questionnaire" onclick="start_questionnaire();">
+                    Begin questionnaire
+                </div>
+                <div class="prompt-boxes">
+                    <div class="prompt-box hidden" id="prompt-step1">
+                        <div class="prompt-progress">
+                            Step 1, question <span id="prompt-step1-counter">1</span>/<span id="prompt-step1-counter-max">0</span>
+                        </div>
+                        <div class="prompt-question" id="question-box-step1">
+                            <div class="prompt-question-box">
+                                <span class="prompt-question-box-text" id="question-step1">Do you like pancakes?</span>
+                                <input type="text" id="prompt-question-step1-input" value="">
+                            </div>
+                        </div>
+                        <div class="prompt-buttons">
+                            <div class="prompt-button" onclick="question_prev(1);">
+                                Prev
+                            </div>
+                            <div class="prompt-button" onclick="question_next(1);">
+                                Next
+                            </div>
+                            <div class="prompt-button" onclick="question_skip(1);">
+                                Skip
+                            </div>
+                        </div>
+                    </div>
 
-       <div class="form-step" id="step2">
-            <h2>Step 2: Contact Details</h2>
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="eamil" readonly><br><br>
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" readonly><br><br>
-            <label for="contact">Contact Method:</label>
-            <input type="text" id="contact" name="contact" readonly><br><br>
-            <button onclick="getcontactinfo()">Answer</button>
-            <button onclick="nextStep()">Next</button>
-       </div>
-        
-       <div class="form-step" id="step3">
-            <h2>Step 3: Address Details</h2>
-            <label for="houseno">House number:</label>
-            <input type="text" id="houseno" name="houseno" readonly><br><br>
-            <label for="streetname">Street Name:</label>
-            <input type="text" id="streetname" name="streetname" readonly><br><br>
-            <label for="postcode">Post Code:</label>
-            <input type="text" id="postcode" name="postcode" readonly><br><br>
-            <button onclick="getaddressinfo()">Answer</button>
-            <button onclick="submitForm()">Submit</button>
-       </div>
+                    <div class="prompt-box hidden" id="prompt-step2">
+                        <div class="prompt-progress">
+                            Step 2, question <span id="prompt-step2-counter">1</span>/<span id="prompt-step2-counter-max">0</span>
+                        </div>
+                        <div class="prompt-question" id="question-box-step2">
+                            <div class="prompt-question-box">
+                                <span class="prompt-question-box-text" id="question-step2">Do you like pancakes?</span>
+                                <input type="text" id="prompt-question-step2-input" value="">
+                            </div>
+                        </div>
+                        <div class="prompt-buttons">
+                            <div class="prompt-button" onclick="question_prev(2);">
+                                Prev
+                            </div>
+                            <div class="prompt-button" onclick="question_next(2);">
+                                Next
+                            </div>
+                            <div class="prompt-button" onclick="question_skip(2);">
+                                Skip
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-box hidden" id="prompt-step3">
+                        <div class="prompt-progress">
+                            Step 3, question <span id="prompt-step3-counter">1</span>/<span id="prompt-step3-counter-max">0</span>
+                        </div>
+                        <div class="prompt-question" id="question-box-step3">
+                            <div class="prompt-question-box">
+                                <span class="prompt-question-box-text" id="question-step3">Do you like pancakes?</span>
+                                <input type="text" id="prompt-question-step3-input" value="">
+                            </div>
+                        </div>
+                        <div class="prompt-buttons">
+                            <div class="prompt-button" onclick="question_prev(3);">
+                                Prev
+                            </div>
+                            <div class="prompt-button" onclick="question_next(3);">
+                                Next
+                            </div>
+                            <div class="prompt-button" onclick="question_skip(3);">
+                                Skip
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Your user profile</h2>
+                User profile progress: <span id="profile-progress">0</span>%
+                <div class="progress-bar">
+                    <div class="progress-bar-complete" id="progress-bar-value"></div>
+                </div>
+                <div class="answer-boxes">
+                    <div class="answer-box hidden" id="step-1-answers">
+                        <div class="answer-title">
+                            Step 1 - Personal information
+                        </div>
+                        <div id="answer-box-1-1" class="empty">
+                            Your name: <span id="answer-1-1"></span>
+                        </div>
+                        <div id="answer-box-1-2" class="empty">
+                            Your surname: <span id="answer-1-2"></span>
+                        </div>
+                        <div id="answer-box-1-3" class="empty">  
+                            Your age: <span id="answer-1-3"></span>
+                        </div>
+                        <div id="answer-box-1-4" class="empty">
+                            Your gender: <span id="answer-1-4"></span>
+                        </div>
+                        <div id="answer-box-1-5" class="empty">
+                            Terms of Service accepted: <span id="answer-1-5"></span>
+                        </div>
+                        <div id="answer-box-1-6" class="empty">
+                            Privacy Policy accepted: <span id="answer-1-6"></span>
+                        </div>
+                    </div>
+                    <div class="answer-box hidden" id="step-2-answers">
+                        <div class="answer-title">
+                            Step 2 - To be changed
+                        </div>
+                        <div id="answer-box-2-1" class="empty">
+                            Likes pancakes: <span id="answer-2-1"></span>
+                        </div>
+                        <div id="answer-box-2-2" class="empty">
+                            Likes pizza: <span id="answer-2-2"></span>
+                        </div>
+                        <div id="answer-box-2-3" class="empty">  
+                            Likes waffles: <span id="answer-2-3"></span>
+                        </div>
+                        <div id="answer-box-2-4" class="empty">  
+                            Likes fish: <span id="answer-2-4"></span>
+                        </div>
+                    </div>
+                    <div class="answer-box hidden" id="step-3-answers">
+                        <div class="answer-title">
+                            Step 3 - To be changed
+                        </div>
+                        <div id="answer-box-3-1" class="empty">
+                            Likes pancakes: <span id="answer-3-1"></span>
+                        </div>
+                        <div id="answer-box-3-2" class="empty">
+                            Likes pizza: <span id="answer-3-2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </div>
+        <footer id="footer">
+            <ul>
+                <li>Page editors:</li>
+                <li><a href="./pageEditor_ST1.html" id="pageEditor_ST1">Student 1</a></li>
+                <li><a href="./pageEditor_ST2.html" id="pageEditor_ST2">Student 2</a></li>
+                <li><a href="./pageEditor _ST3.html" id="pageEditor_ST3">Student 3</a></li>
+                <li><a href="./pageEditor_ST4.html" id="pageEditor_ST4">Student 4</a></li>
+            </ul>
+        </footer>
 
-    <script>
-        let currentStep = 1;
-        const totalSteps = document.querySelectorAll('.form-step').length;
-      
-        function nextStep() {
-          if (currentStep < totalSteps) {
-            document.getElementById(`step${currentStep}`);
-            currentStep++;
-            document.getElementById(`step${currentStep}`).classList.add('active-step');
-          }
-        }
-      
-        function submitForm() {
-          // Here you can collect form data and perform further actions like sending it to the server
-          alert('Form submitted successfully!');
-        }
-
-        function getbasicinfo() {
-        var firstname = prompt("Please enter your firstname: ");
-        var lastname = prompt("Please enter your last name: ");
-        let dob = prompt("Please enter your date of birth: ");
-        document.getElementById("firstname").value = firstname;
-        document.getElementById("lastname").value = lastname;
-        document.getElementById("dob").value = dob;
-        }
-
-        function getcontactinfo() {
-        var email = prompt("Please enter your email address: ");
-        var phone = prompt("Please enter your phone number: ");
-        let contact = prompt("Please enter preferred contact method(email/phone/both): ");
-        document.getElementById("email").value = email;
-        document.getElementById("phone").value = phone;
-        document.getElementById("contact").value = contact;
-        }
-
-        function getaddressinfo() {
-        var houseno = prompt("Please enter your house number: ");
-        var streetname = prompt("Please enter your street name: ");
-        let postcode = prompt("Please enter your postcode: ");
-        document.getElementById("houseno").value = houseno;
-        document.getElementById("streetname").value = streetname;
-        document.getElementById("postcode").value = postcode;
-        }
-      </script>
-</body>
+        <script src="profile.js"></script>
+    </body>
 </html>
