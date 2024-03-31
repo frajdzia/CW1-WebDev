@@ -1,0 +1,280 @@
+/* BODY --------------------------------------------------------------------------------- */
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Arial', sans-serif;
+    margin: 30px;
+    color: black;
+}
+
+
+/* NAVIGATION BAR ----------------------------------------------------------------------- */
+
+#logo {
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 25px;
+    position: relative;
+    display: inline;
+}
+
+nav {
+    position: fixed;
+    min-height: 0;
+    display: inline;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("./nav_background.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 10px;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+    float: right;
+    transition: padding 0.3s ease;
+}
+
+#sitename {
+    color: #D4E7C5;
+    font-size: 60px;
+    padding: 40px;
+    display: block;
+    transition: padding 0.3s ease;
+}
+
+nav a:link,
+nav a:visited {
+    color: #E1F0DA;
+    font-weight: bold;
+    background-color: #6e9274;
+    text-decoration: none;
+    padding: 10px 7px 10px;
+}
+
+nav a:hover {
+    color: #FCFFCC;
+    background-color: #AFC8AD;
+    font-weight: bold;
+}
+
+nav.active {
+    color: #FCFFCC;
+    border-bottom: 3px solid #FCFFCC;
+    border-bottom-color: #FCFFCC;
+    text-decoration: underline;
+}
+
+nav ul {
+    margin-top: 10px;
+    display: flex;
+    float: right;
+    justify-content: space-evenly;
+    padding-right: 40px;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+}
+
+nav ul li:first-child a {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+}
+
+nav ul li:last-child a {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-right: 20px;
+}
+
+/* MAIN PART OF WEBSITE ----------------------------------------------------------------- */
+
+#main {
+    min-height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 90px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-top: 150px;
+    z-index: 1;
+    text-align: justify;
+}
+
+h1 {
+    padding: 20px 20px 20px;
+    height: 2px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-style: italic;
+    color: black;
+}
+
+p {
+    text-align: center;
+}
+
+.prompt-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.prompt-box {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color:#b4cffa;
+}
+
+.prompt-progress {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom:15px;
+}
+
+.prompt-question {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+    
+}
+
+.prompt-question-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.prompt-question-box-text {
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+.prompt-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.prompt-button {
+    width: 20%;
+    text-align: center;
+    background-color:#ceaa96;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#start-questionnaire {
+    padding: 20px 20px 20px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    align-items: center;
+    font-style: italic;
+    color: black;
+}
+
+.prompt-button:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.answer-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.answer-box {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 18px;
+    background-color: #c2f2d0;
+    width: 28%;
+}
+
+.answer-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.empty {
+    display: none;
+}
+
+.progress-bar {
+    border: 3px solid black;
+    border-radius: 8px;
+    width: 250px;
+    height: 20px;
+}
+
+.progress-bar-complete {
+    background-color: green;
+    border-radius: 4px;
+    height: 20px;
+    width: 0%;
+}
+
+.pageEditor {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+/* FOOTER -------------------------------------------------------------------------------------- */
+
+footer {
+    bottom: 0;
+    left: 0;
+    background-color: #D4E7C5;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer ul li {
+    position: relative;
+    top: 10%;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+}
+
+footer a:link,footer a:visited {
+    color: #6e9274;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FCFFCC;
+    background-color: #AFC8AD;
+    font-weight: bold;
+}
+  
+ 

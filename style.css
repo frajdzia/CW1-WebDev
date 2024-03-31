@@ -30,7 +30,6 @@ nav {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #99BC85; */
     padding: 40px 10px;
     text-align: center;
     z-index: 2;
@@ -47,16 +46,13 @@ nav {
     transition: padding 0.3s ease;
 }
 
-nav a:link {
+nav a:link,
+nav a:visited {
     color: #E1F0DA;
     font-weight: bold;
     background-color: #6e9274;
     text-decoration: none;
     padding: 10px 7px 10px;
-}
-
-nav a:visited {
-    color: #E1F0DA;
 }
 
 nav a:hover {
@@ -104,14 +100,13 @@ nav ul li:last-child a {
 main {
     min-height: 100vh;
     margin-top: 100px;
-    padding-bottom: 120px; 
+    padding-bottom: 120px;
     margin-right: 50px;
     margin-left: 50px;
     padding-top: 150px;
     z-index: 1;
     text-align: justify;
 }
-
 
 h1 {
     padding: 20px 20px 20px;
@@ -133,7 +128,7 @@ h2 {
 .content_container {
     width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: wrap;
 }
 
 .content_container ul {
@@ -156,7 +151,7 @@ h2 {
 .content_item {
     display: inline-block;
     position: relative;
-    margin-right: 10px;
+    margin-right: 5px;
     transition: opacity 0.5s ease;
 }
 
@@ -172,7 +167,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
     transition: opacity 0.5s ease;
 }
@@ -188,42 +183,88 @@ h2 {
 .content_text {
     color: white;
     font-size: 16px;
+    width: 350px;
 }
 
-/* --------------------------------------------------------------------------------------------------*/
-
-.container {
-    display: flex;
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow:
+        -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
-.text-container {
-    flex: 2;
+/* ------------------------------------------------------------------------------------------------*/
+
+#left_side img {
+    float: left;
+    margin-right: 20px;
+    max-width: 20%;
+    height: auto;
 }
 
-.image-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+#right_side img {
+    float: right;
+    margin-left: 20px;
+    max-width: 40%;
+    min-width: 30%;
+    height: auto;
 }
 
-.image-container img {
-    max-width: 50%;
+#justified_text {
+    text-align: justify;
+}
+
+/* CONTENT PAGE STUDENT 2  -------------------------------------------------------------------------------*/
+.sidenav {
+    margin-top: 200px;
+    height: 200px;
+    width: 160px;
+    position: fixed;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow-x: hidden;
+    padding-top: 20px;
+    z-index: 2;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #2E2E2E;
     display: block;
-    margin: 0 auto;
-    margin-left: 30px;
 }
 
+.sidenav a:hover {
+    color: #050505;
+}
 
+.content_st2 {
+    margin-top: 100px;
+    padding-bottom: 120px;
+    margin-right: 50px;
+    padding-top: 150px;
+    margin-left: 160px;
+}
+
+/* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
+
+#feedback_div{
+    max-width: 800px;
+    margin-left: 25%;
+}
 #satisfactionScale label {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 0 5px;
 }
 
-.feedback_title{
+.feedback_title {
     font-weight: bold;
     font-size: 18px;
 }
@@ -242,6 +283,12 @@ textarea {
 fieldset {
     border: none;
 }
+legend {
+    width: auto;
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 0 10px; 
+}
 
 #name,
 #email {
@@ -257,14 +304,15 @@ fieldset {
     border-radius: 15px;
 }
 
+#feedback_form h2{
+    color:red;
+    margin-left: 40%;
+}
+
 .separator {
     display: block;
     width: 100%;
     margin-bottom: 20px;
-}
-
-#satisfaction_scale label {
-    display: inline-block;
 }
 
 .rounded-button {
@@ -278,6 +326,8 @@ fieldset {
     font-weight: bold;
     margin-bottom: 2px;
     font-weight: bold;
+    margin-right: 46%;
+
 }
 
 .rounded-button:hover {
@@ -293,17 +343,23 @@ fieldset {
     font-weight: bold;
 }
 
-#climate_changes_list li {
-    list-style-type: decimal;
-    margin-bottom: 12px;
+/* PAGE EDITOR STUDENT 2 ------------------------------------------------------------------------ */
+
+.page_editor_links a:link,
+.page_editor_links a:visited {
+    color: #42664f;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 7px 10px;
 }
 
-#page_editor{
-    width:400px;
-    height: auto;
+.page_editor_links a:hover {
+    color: #87b28e;
+    font-weight: bold;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
+
 footer {
     position: fixed;
     margin-top: 30px;
@@ -312,16 +368,16 @@ footer {
     background-color: #D4E7C5;
     width: 100%;
     padding: 10px 0;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     text-decoration: none;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 footer ul {
-    list-style: none; 
+    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -330,13 +386,14 @@ footer ul {
 }
 
 footer ul li {
-    margin: 0 10px; 
+    margin: 0 10px;
     font-size: 18px;
+    font-weight: bold;
 }
 
-footer a:link, footer a:visited {
+footer a:link,
+footer a:visited {
     color: #6e9274;
-    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s, background-color 0.3s;
 }
@@ -346,5 +403,4 @@ footer a:hover {
     background-color: #AFC8AD;
     padding: 3px 5px;
     border-radius: 5px;
-    font-weight: bold;
 }

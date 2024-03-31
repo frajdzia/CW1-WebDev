@@ -5,47 +5,46 @@
     <title>Feedback</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="js_main.js"></script>
 </head>
 
 <body>
     <nav>
         <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
-    </div>
-    <ul>
-        <li><a href="./home.html" id="home">Home</a></li>
-        <li><a href="./gallery.html" id="gallery">Gallery</a></li>
-        <li><a href="./shop.html" id="shop">Shop</a></li>
-        <li><a href="./profile.html" id="profile">User profile</a></li>
-        <li><a href="./feedback.html" id="feedback">Feedback</a></li>
-        <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
-        <li><a href="./team.html" id="team">Team</a></li>
-    </ul>
-    <h1 id="sitename">Feedback Form</h1>
-</nav>
+        </div>
+        <ul>
+            <li><a href="./home.html" id="home">Home</a></li>
+            <li><a href="./gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="./shop.html" id="shop">Shop</a></li>
+            <li><a href="./profile.html" id="profile">User profile</a></li>
+            <li><a href="./feedback.html" id="feedback">Feedback</a></li>
+            <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
+            <li><a href="./team.html" id="team">Team</a></li>
+        </ul>
+        <h1 id="sitename">Feedback Form</h1>
+    </nav>
 
     <main>
-
-        <h3>Required fields*</h3>
-
-        <div>
+        <div id="feedback_div">
             <form id="feedback_form">
+                <h2>Required fields*</h2>
                 <fieldset>
                     <legend class="feedback_title">Feedback Information</legend>
                     <span class="separator"></span>
                     <label for="name">*Name:</label>
-                    <input type="text" id="name" name="firstname" placeholder="Enter your name" required>
+                    <input type="text" id="name" name="firstname" placeholder="Enter your name" >
                     <span class="separator"></span>
                     <label for="email">*Email address:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
                     <span class="separator"></span>
                     <fieldset>
-                        <legend>Have you visited our website before?</legend>
+                        <legend class="questions">*Have you visited our website before?</legend>
                         <label><input type="radio" name="visited" value="yes"> Yes</label>
                         <label><input type="radio" name="visited" value="no"> No</label>
                     </fieldset>
                     <span class="separator"></span>
-                    <fieldset>
-                        <legend>Was this website informative and easy to navigate?</legend>
+                    <fieldset class="question">
+                        <legend class="questions">*Was this website informative and easy to navigate?</legend>
                         <label><input type="radio" name="navigation" value="yes"> Yes</label>
                         <label><input type="radio" name="navigation" value="no"> No</label>
                     </fieldset>
@@ -54,7 +53,7 @@
                     <textarea id="suggestions" name="suggestions" placeholder="Add your message here..."></textarea>
                     <span class="separator"></span>
                     <fieldset>
-                        <legend>How satisfied are you with our services?</legend>
+                        <legend>*How satisfied are you with our services?</legend>
                         <div id="satisfaction_scale">
                             <label for="r1">1<input type="radio" name="satisfaction" id="r1" value="1"></label>
                             <label for="r2">2<input type="radio" name="satisfaction" id="r2" value="2"></label>
@@ -69,13 +68,16 @@
                         </div>
                     </fieldset>
                     <span class="separator"></span>
-                    <label for="updates">Would you like to receive updates about the website or any offers:</label><br>
-                    <textarea id="updates" name="updates" placeholder="Add your message here..."></textarea>
+                    <label for="updates">*Would you like to receive updates about the website or any offers:</label><br>
+                    <select name="updates" id="updates">
+                        <option value="Yes - by email" selected>Yes - by email</option>
+                        <option value="No">No</option>
+                    </select>
                     <span class="separator"></span>
                     <label for="questions">Aditional questions or requests: </label><br>
                     <textarea id="questions" name="questions" placeholder="Add your message here..."></textarea>
                     <span class="separator"></span>
-                    <input class="rounded-button" type="submit" value="Submit">
+                    <input class="rounded-button"  id="submitBTN" type="submit" value="Submit">
 
                 </fieldset>
 
@@ -84,10 +86,9 @@
     </main>
     <!-- FOOTER SECTION -->
     <footer id="footer">
-            <h3>Climate action</h3>
-            <p><a href="#sitename">Go to the top</a></p>
+        <h3>Climate action</h3>
         <ul>
-            <li>Page editors:</li>
+            <li>Website editors:</li>
             <li><a href="./pageEditor_ST1.html" target="_blank" id="pageEditor_ST1">Student 1</a></li>
             <li><a href="./pageEditor_ST2.html" target="_blank" id="pageEditor_ST2">Student 2</a></li>
             <li><a href="./pageEditor_ST3.html" target="_blank" id="pageEditor_ST3">Student 3</a></li>
@@ -97,5 +98,4 @@
     <script src="js_main.js"></script>
     <!-- END OF FOOTER SECTION -->
 </body>
-
 </html>
