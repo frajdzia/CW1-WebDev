@@ -217,41 +217,47 @@ h2 {
     text-align: justify;
 }
 
-/* CONTENT PAGE STUDENT 2  -------------------------------------------------------------------------------*/ 
+/* CONTENT PAGE STUDENT 2  -------------------------------------------------------------------------------*/
 .sidenav {
-    height: 100%;
+    margin-top: 200px;
+    height: 200px;
     width: 160px;
     position: fixed;
     left: 0;
-    background-color: #111;
+    background-color: rgba(255, 255, 255, 0.3);
     overflow-x: hidden;
     padding-top: 20px;
-  }
-  
-  .sidenav a {
+    z-index: 2;
+}
+
+.sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 15px;
-    color: #818181;
+    color: #2E2E2E;
     display: block;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+}
 
-  .content_st2 {
+.sidenav a:hover {
+    color: #050505;
+}
+
+.content_st2 {
     margin-top: 100px;
     padding-bottom: 120px;
     margin-right: 50px;
     padding-top: 150px;
     margin-left: 160px;
-  }
+}
 
 /* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
 
+#feedback_div{
+    max-width: 800px;
+    margin-left: 25%;
+}
 #satisfactionScale label {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -277,6 +283,12 @@ textarea {
 fieldset {
     border: none;
 }
+legend {
+    width: auto;
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 0 10px; 
+}
 
 #name,
 #email {
@@ -292,14 +304,15 @@ fieldset {
     border-radius: 15px;
 }
 
+#feedback_form h2{
+    color:red;
+    margin-left: 40%;
+}
+
 .separator {
     display: block;
     width: 100%;
     margin-bottom: 20px;
-}
-
-#satisfaction_scale label {
-    display: inline-block;
 }
 
 .rounded-button {
@@ -313,6 +326,8 @@ fieldset {
     font-weight: bold;
     margin-bottom: 2px;
     font-weight: bold;
+    margin-right: 46%;
+
 }
 
 .rounded-button:hover {
@@ -327,7 +342,6 @@ fieldset {
     background-color: #759572;
     font-weight: bold;
 }
-
 
 /* PAGE EDITOR STUDENT 2 ------------------------------------------------------------------------ */
 
