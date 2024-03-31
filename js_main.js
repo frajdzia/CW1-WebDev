@@ -40,7 +40,43 @@ document.addEventListener("DOMContentLoaded", function() {
             menuItem[i].className = "active";
         }
     }
+
+    const form = document.getElementById('feedback_form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting immediately
+
+        let isValid = true;
+        let messages = [];
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const updates = document.getElementById('updates').value; 
+        const nameRegex = /^[a-zA-Z\s\'\-]+$/; 
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (name === '' || !nameRegex.test(name)) {
+            messages.push('Please enter a valid name. Names should only contain letters.');
+            isValid = false;
+        }
+
+        if (email === '' || !emailRegex.test(email)) {
+            messages.push("Please enter a valid email address.");
+            isValid = false;
+        }
+
+        if (updates === '') { // Check your logic here; this condition might always be false if there's a default value
+            messages.push('Please select if you would like to receive updates.');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            alert(messages.join('\n'));
+        } else {
+            alert("Form submitted successfully");
+            form.submit(); // Uncomment this line to enable form submission after validation
+        }
+    });
 });
+
 // Smoothly scrolls to the top
 function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -67,65 +103,4 @@ document.querySelectorAll('.sidenav a').forEach(link => {
             });
         }
     });
-});
-
-//Check if name, email and updates are present
-document.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById('feedback_form');
-    form.addEventListener('submit', function(event) {
-        // Prevent the form from submitting 
-        event.preventDefault();
-
-        // Get the values of the fields
-        var name = document.getElementById('name').value.trim();
-        var email = document.getElementById('email').value.trim();
-        var updates = document.getElementById('updates').value; 
-
-        // Check if the fields are filled out
-        if (name === '') {
-            alert('Please fill out your name.');
-            return false;
-        }
-
-        if (email === '') {
-            alert('Please fill out your email address.');
-            return false; 
-        }
-
-        
-        if (updates === '') { 
-            alert('Please select if you would like to receive updates.');
-            return false; 
-        }
-
-        // If all checks pass, submit the form
-        alert("Form submitted successfully ");
-        form.submit();
-    });
-});
-
-// Name and email validation for feedback
-document.getElementById('feedback_form').addEventListener('submit', function(event) {
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    // only allow letters
-    let nameRegex = /^[a-zA-Z\s\'\-]+$/; 
-    // basic email pattern
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // Check if the name input is valid
-    if (!nameRegex.test(name)) {
-        alert("Please enter a valid name. Names should only contain letters.");
-        event.preventDefault(); // Prevent submission if not
-        return false;
-    }
-
-    // Check if the email input is valid
-    if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        event.preventDefault(); // Prevent submission if not
-        return false;
-    }
-
-    // if both ifs pass then form will be submited
 });

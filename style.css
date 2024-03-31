@@ -254,8 +254,9 @@ h2 {
 
 #feedback_div{
     max-width: 800px;
-    margin-left: 25%;
+    margin-left: 20%;
 }
+
 #satisfactionScale label {
     display: inline-block;
     align-items: center;
@@ -304,9 +305,9 @@ legend {
     border-radius: 15px;
 }
 
-#feedback_form h2{
+#feedback_form h3{
     color:red;
-    margin-left: 40%;
+    text-align: center;
 }
 
 .separator {
