@@ -3,369 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="shop_style.css"> 
-
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop_style.css">
     <title>Shop</title>
-    <!-- <style>
-        .small-navbar {
-            height: 50px; /* Adjust the height as needed */
-            transition: height 0.3s; /* Add smooth transition effect */
-        }
-
-        /* Global Styles */
+    <style>
         body {
+            background-color: antiquewhite;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
         }
-
-        header, footer {
-            text-align: center;
-            background-color: #f2f2f2;
-            padding: 20px 0;
+        
+        h1 {
+            color: #D4E7C5;
+            font-size: 60px;
+            padding: 40px;
+            display: block;
+            transition: padding 0.3s ease;
         }
-
-        .product-showcase {
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            margin-bottom: 120px; /* Added margin to prevent overlap with order summary */
         }
-
+        
         .product {
-            width: 200px; /* Adjust width as needed */
-            margin: 20px;
-            padding: 10px;
+            background-color: #fff;
             border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            flex: 1 0 calc(33.33% - 40px);
+            box-sizing: border-box;
             text-align: center;
+            position: relative;
         }
-
+        
         .product img {
-            width: 58%;
-            height: 180px; /* Fixed height to ensure all images have the same dimensions */
-            object-fit: cover; /* Preserve aspect ratio */
-
+            max-width: 100%;
+            height: auto;
         }
-
-        .product select, .product button {
+        
+        .product h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .product .description {
+            font-size: 16px;
+            color: #666;
             margin-top: 10px;
         }
-
-        .order-summary {
-            background-color: #f9f9f9;
-            padding: 20px;
-            width: 250px;
-            height: auto; /* Change height to auto */
-            overflow-y: auto;
-            margin-top: 20px; /* Adjust margin to create space between the content and the order summary */
-            margin-left: auto; /* Center the order summary horizontally */
-            margin-right: auto;
-            text-align: center; /* Center the content */
-
-        }
-            <!-- background-color: #f9f9f9;
-            padding: 20px;
-            width: 250px;
-            position: fixed;
-            right: 0;
-            top: 0;
-            height: 100%;
-            overflow-y: auto;
-        } -->
-
-        .checkout-btn {
-            width: 100%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-        }
-
-        .checkout-btn:hover {
-            background-color: #45a049;
-        }
-
-        .basket {
-            margin-bottom: 20px;
-        }
-
-        .total-price {
+        
+        .product .price {
+            font-size: 20px;
+            color: #28a745;
+            margin-top: 10px;
             font-weight: bold;
         }
-
-        .remove-item {
-            color: rgb(168, 17, 17);
-            cursor: pointer;
+        
+        .options {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            margin-top: 20px;
         }
-
-                /* Styles for the large navigation bar */
-                #navbar-large {
-                    background-color: #333;
-                    color: white;
-                    height: 80px; /* Adjust height as needed */
-                    transition: height 0.3s; /* Smooth transition effect */
-                }
         
-                /* Styles for the small navigation bar */
-                #navbar-small {
-                    background-color: #333;
-                    color: white;
-                    height: 40px; /* Adjust height as needed */
-                    display: none; /* Initially hidden */
-                }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
         
-                /* Show small navigation bar when scrolling */
-                body.scrolled #navbar-small {
-                    display: block;
-                }
+        .options select, .options input[type="radio"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
         
-                /* Hide large navigation bar when scrolling */
-                body.scrolled #navbar-large {
-                    display: none;
-                }
-        s
-                /* Styles for the navigation links */
-                #navbar-large a, #navbar-small a {
-                    padding: 14px 20px;
-                    text-decoration: none;
-                    color: white;
-                    display: inline-block;
-                }
-
+        .options input[type="button"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
         
-
-        <!-- @media only screen and (max-width: 768px) {
-            .product {
-                width: calc(50% - 40px); /* Adjust width to fit two products per row */
-                max-width: calc(50% - 40px); /* Adjust maximum width of the image */
-            }
+        .options input[type="button"]:hover {
+            background-color: #0056b3;
+        }
         
-            .product-showcase {
-                justify-content: flex-start; /* Ensure products start from the beginning of the row */
-            }
-        } -->
+        .basket-container {
+            flex: 1 0 100%;
+            margin: 20px;
+        }
         
-            
-    </style> -->
+        .basket {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .basket h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .basket .order-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .basket .order-list li {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .basket .total-price {
+            font-size: 20px;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .checkout-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+
     <!-- NAVIGATION BAR SECTION -->
-    <nav id="navbar-large">
+    <nav>
         <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
         </div>
         <ul>
-            <li><a href="home.html" id="home">Home</a></li>
-            <li><a href="gallery.html" id="gallery">Gallery</a></li>
-            <li><a href="shop.html" id="shop">Shop</a></li>
-            <li><a href="profile.html" id="profile">User profile</a></li>
-            <li><a href="feedback.html" id="feedback">Feedback</a></li>
-            <li><a href="sitemap.html" id="sitemap">Sitemap</a></li>
-            <li><a href="team.html" id="team">Team</a></li>
+            <li><a href="./home.html" id="home">Home</a></li>
+            <li><a href="./gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="./new_shop.html" id="shop">Shop</a></li>
+            <li><a href="./profile.html" id="profile">User profile</a></li>
+            <li><a href="./feedback.html" id="feedback">Feedback</a></li>
+            <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
+            <li><a href="./team.html" id="team">Team</a></li>
         </ul>
         <h1 id="sitename">Climate Action</h1>
     </nav>
-
-    <!-- Small navigation bar -->
-    <nav id="navbar-small">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <!-- Your content goes here -->
-
-    <!-- JavaScript to handle scrolling -->
-    <script>
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 0) {
-                document.body.classList.add("scrolled");
-            } else {
-                document.body.classList.remove("scrolled");
-            }
-        });
-    </script>
-
     <!-- END OF NAVIGATION BAR SECTION -->
 
     <header>
         <h1>Product Showcase</h1>
     </header>
-
-    <div class="product-showcase">
+    <div class="container">
         <!-- Product 1 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/water_bottle.png" alt="Product 1">
-            <h2> Reusable Water Bottle </h2>
-            <p>Description of Product 1</p>
+            <img src="coverage/SHOP IMAGES/shop/bottle_1.jpg" alt="Reusable Water Bottle">
+            <h2>Reusable Water Bottle</h2>
+            <p class="description">Description of Product 1</p>
             <p class="price">£10.00</p>
-            <select name="product1-options">
-                <option value="default">Select Option</option>
-                <option value="option1"> Light Green </option>
-                <option value="option2"> White </option>
-                <!-- Add more options if needed -->
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
+            <div class="options">
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="Size" id="Size">
+                        <option value="10.00">Small = £10</option>
+                        <option value="11.00">Medium = £11</option>
+                        <option value="12.00">Large = £12</option>
+                    </select>
+                    <label for="colour">Color:</label>
+                    <input type="radio" name="colour" id="blue" value="Blue">
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="colour" id="white" value="White">
+                    <label for="white">White</label>
+                    <input type="radio" name="colour" id="black" value="Black">
+                    <label for="black">Black</label>
+                    <input type="button" value="Add to Basket" name="button">
+                </form>
+            </div>
         </div>
+
+
         <!-- Product 2 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/lunchbox_bamboo.png" alt="Product 2">
-            <h2> Bamboo Lunchbox </h2>
-            <p>
-                Glass 800 ml Lunchbox Bamboo Lid.
-            </p>
-
-            <p class="price">£15.00</p>
-            <select name="product2-options">
-                <option value="default">Select Option</option>
-                <option value="option1">100ml</option>
-                <option value="option2">200ml</option>
-                <!-- Add more options if needed -->
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
+            <img src="coverage/SHOP IMAGES/shop/bottle_2.jpg" alt="Bamboo Lunchbox">
+            <h2>Bamboo Lunchbox</h2>
+            <p class="description">Description of Product 2</p>
+            <p class="price">£14.00</p>
+            <div class="options">
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="Size" id="Size">
+                        <option value="14.00">Small = £14</option>
+                        <option value="15.00">Medium = £15</option>
+                        <option value="16.00">Large = £16</option>
+                    </select>
+                    <label for="colour">Color:</label>
+                    <input type="radio" name="colour" id="blue" value="Blue">
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="colour" id="white" value="White">
+                    <label for="white">White</label>
+                    <input type="radio" name="colour" id="black" value="Black">
+                    <label for="black">Black</label>
+                    <input type="button" value="Add to Basket" name="button">
+                </form>
+            </div>
         </div>
+
+
         <!-- Product 3 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/bento_lunchbox_spork.png" alt="Product 3">
-            <h2>Bento Lunchbox </h2>
-            <p>- Made from durable and environmentally friendly PP plastic
-               - Includes a 3-in-1 fork, spoon, and knife</p>
-            <p class="price">£20.00</p>
-            <select name="product3-options">
-                <option value="default">Select Option</option>
-                <option value="option1">Small</option>
-                <option value="option2">Medium</option>
-                <option value="option3">Large</option>
-                <!-- Add more options if needed -->
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
+            <img src="coverage/SHOP IMAGES/Shop/bottle_3.jpg" alt="Bento Lunchbox">
+            <h2>Bento Lunchbox</h2>
+            <p class="description">Description of Product 3</p>
+            <p class="price">£16.00</p>
+            <div class="options">
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="Size" id="Size">
+                        <option value="16.00">Small = £16</option>
+                        <option value="17.00">Medium = £17</option>
+                        <option value="18.00">Large = £18</option>
+                    </select>
+                    <label for="colour">Color:</label>
+                    <input type="radio" name="colour" id="blue" value="Blue">
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="colour" id="white" value="White">
+                    <label for="white">White</label>
+                    <input type="radio" name="colour" id="black" value="Black">
+                    <label for="black">Black</label>
+                    <input type="button" value="Add to Basket" name="button">
+                </form>
+            </div>
         </div>
+
+
         <!-- Product 4 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/stainless_steel_lunchbox.png" alt="Product 4">
-            <h2>Stainless Steel Lunchbox</h2>
-            <p>Description of Product 4</p>
-            <p class="price">£25.00</p>
-            <select name="product4-options">
-                <option value="default">Select Option</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <!-- Add more options if needed -->
-            </select>
-            <button class="add-to-cart">Add to Cart</button>
+            <img src="coverage/SHOP IMAGES/shop/bottle_1.jpg" alt="Reusable Water Bottle">
+            <h2>Reusable Water Bottle</h2>
+            <p class="description">Description of Product 4</p>
+            <p class="price">£10.00</p>
+            <div class="options">
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="Size" id="Size">
+                        <option value="10.00">Small = £10</option>
+                        <option value="11.00">Medium = £11</option>
+                        <option value="12.00">Large = £12</option>
+                    </select>
+                    <label for="colour">Color:</label>
+                    <input type="radio" name="colour" id="blue" value="Blue">
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="colour" id="white" value="White">
+                    <label for="white">White</label>
+                    <input type="radio" name="colour" id="black" value="Black">
+                    <label for="black">Black</label>
+                    <input type="button" value="Add to Basket" name="button">
+                </form>
+            </div>
         </div>
-        <!-- More products can be added similarly -->
 
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="coverage/SHOP IMAGES/shop/bottle_10.jpg" alt="Bamboo Lunchbox">
+            <h2>Bamboo Lunchbox</h2>
+            <p class="description">Description of Product 5</p>
+            <p class="price">£14.00</p>
+            <div class="options">
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="Size" id="Size">
+                        <option value="16.00">Small = £16</option>
+                        <option value="17.00">Medium = £17</option>
+                        <option value="18.00">Large = £18</option>
+                    </select>
+                    <label for="colour">Color:</label>
+                    <input type="radio" name="colour" id="blue" value="Blue">
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="colour" id="white" value="White">
+                    <label for="white">White</label>
+                    <input type="radio" name="colour" id="black" value="Black">
+                    <label for="black">Black</label>
+                    <input type="button" value="Add to Basket" name="button">
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="coverage/SHOP IMAGES/Shop/bottle_9.jpg" alt="Bento Lunchbox">
+            <h2>Bento Lunchbox</h2>
+            <p class="description">Description of Product 6</p>
+            <p class="price">£16.00</p>
+            <div class="options">
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="Size" id="Size">
+                        <option value="14.00">Small = £14</option>
+                        <option value="15.00">Medium = £15</option>
+                        <option value="16.00">Large = £16</option>
+                    </select>
+                    <label for="colour">Color:</label>
+                    <input type="radio" name="colour" id="blue" value="Blue">
+                    <label for="blue">Blue</label>
+                    <input type="radio" name="colour" id="white" value="White">
+                    <label for="white">White</label>
+                    <input type="radio" name="colour" id="black" value="Black">
+                    <label for="black">Black</label>
+                    <input type="button" value="Add to Basket" name="button">
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <!-- Basket -->
+        <div class="basket-container">
+            <div class="basket">
+                <h2>Your Order</h2>
+                <ul class="order-list"></ul>
+                <div class="total-price">Total Price: £0.00</div>
+                <input type="button" class="checkout-button" name="checkout" value="Checkout">
+            </div>
+        </div>
     </div>
 
-    <aside class="order-summary">
-        <h2>Order Summary</h2>
-        <div class="basket">
-            <p>Your Basket:</p>
-            <ul>
-                <!-- Selected items will be dynamically added here -->
-            </ul>
-            <p>Total: <span class="total-price">£0.00</span></p>
-            <button class="checkout-btn">Proceed to Checkout</button>
-        </div>
-    </aside>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const addToCartButtons = document.querySelectorAll(".add-to-cart");
-            const basket = document.querySelector(".basket ul");
-            const totalPrice = document.querySelector(".total-price");
-            const checkoutBtn = document.querySelector(".checkout-btn");
-    
-            let total = 0;
-    
-            addToCartButtons.forEach(button => {
-                button.addEventListener("click", function() {
-                    const product = this.parentNode;
-                    const productName = product.querySelector("h2").textContent;
-                    const productPrice = parseFloat(product.querySelector(".price").textContent.replace("£", "")).toFixed(2);
-                    total += parseFloat(productPrice);
-    
-                    const listItem = document.createElement("li");
-                    listItem.textContent = `${productName} - £${productPrice}`;
-                    basket.appendChild(listItem);
-    
-                    totalPrice.textContent = `£${total.toFixed(2)}`;
-    
-                    // Add event listener to remove the item when clicked
-                    const removeButton = document.createElement("button");
-                    removeButton.textContent = "Remove";
-                    removeButton.className = "remove-item";
-                    removeButton.addEventListener("click", function() {
-                        total -= parseFloat(productPrice);
-                        totalPrice.textContent = `£${total.toFixed(2)}`;
-                        listItem.remove();
-                    });
-                    listItem.appendChild(removeButton);
-                });
-            });
-            <button class="checkout-btn"><a href="checkout.html">Proceed to Checkout</a></button>    
-            checkoutBtn.addEventListener("click", function() {
-                const items = document.querySelectorAll(".basket li");
-                const orderSummary = document.querySelector(".order-summary");
-                const feedback = document.createElement("p");
-                if (items.length === 0) {
-                    feedback.textContent = "Your basket is empty. Please add some items before proceeding to checkout.";
-                } else {
-                    orderSummary.innerHTML = "<h2>Order Summary</h2><p>Your Basket:</p><ul></ul><p>Total: <span class='total-price'>£0.00</span></p>";
-                    feedback.textContent = "Checkout successful. Thank you for your purchase!";
-                }
-                orderSummary.appendChild(feedback);
-                totalPrice.textContent = "£0.00";
-                total = 0;
-            });
-        });
-    </script> -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const addToCartButtons = document.querySelectorAll(".add-to-cart");
-            const basket = document.querySelector(".basket ul");
-            const totalPrice = document.querySelector(".total-price");
-            const checkoutBtn = document.querySelector(".checkout-btn");
-    
-            let total = 0;
-    
-            addToCartButtons.forEach(button => {
+            const addToBasketButtons = document.querySelectorAll("input[name='button']");
+            const orderList = document.querySelector(".order-list");
+            const checkoutButton = document.querySelector(".checkout-button");
+            let totalPrice = 0;
+
+            addToBasketButtons.forEach(function(button) {
                 button.addEventListener("click", function() {
-                    const product = this.parentNode;
-                    const productName = product.querySelector("h2").textContent;
-                    const productPrice = parseFloat(product.querySelector(".price").textContent.replace("£", "")).toFixed(2);
-                    total += parseFloat(productPrice);
-    
-                    const listItem = document.createElement("li");
-                    listItem.textContent = `${productName} - £${productPrice}`;
-                    basket.appendChild(listItem);
-    
-                    totalPrice.textContent = `£${total.toFixed(2)}`;
-    
-                    // Add event listener to remove the item when clicked
-                    const removeButton = document.createElement("button");
-                    removeButton.textContent = "Remove";
-                    removeButton.className = "remove-item";
-                    removeButton.addEventListener("click", function() {
-                        total -= parseFloat(productPrice);
-                        totalPrice.textContent = `£${total.toFixed(2)}`;
-                        listItem.remove();
-                    });
-                    listItem.appendChild(removeButton);
+                    const product = this.closest(".product");
+                    const sizePrice = parseFloat(product.querySelector("select").value);
+                    const color = product.querySelector("input[type='radio']:checked").value;
+                    const price = sizePrice; // Starting price is the size price
+                    totalPrice += price;
+
+                    // Construct the product description based on selected options
+                    const productDescription = `Size: ${sizePrice.toFixed(2)}, Color: ${color}, Price: £${price.toFixed(2)}`;
+
+                    // Create a new list item to display the product description
+                    const productItem = document.createElement("li");
+                    productItem.textContent = productDescription;
+
+                    // Add the product to the basket
+                    orderList.appendChild(productItem);
+
+                    // Update total price display
+                    document.querySelector(".total-price").textContent = `Total Price: £${totalPrice.toFixed(2)}`;
                 });
             });
-    
-            checkoutBtn.addEventListener("click", function() {
+
+            checkoutButton.addEventListener("click", function() {
                 window.location.href = "checkout.html"; // Redirect to checkout.html
             });
         });
     </script>
-    
-    
+    <script src="js_main.js"></script>
 </body>
 </html>
+
