@@ -4,6 +4,7 @@ body {
     background-color: antiquewhite;
     font-family: 'Arial', sans-serif;
     margin: 30px;
+    margin-bottom: 0;
     color: black;
 }
 
@@ -100,7 +101,7 @@ nav ul li:last-child a {
 main {
     min-height: 100vh;
     margin-top: 100px;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
     margin-right: 50px;
     margin-left: 50px;
     padding-top: 150px;
@@ -208,13 +209,26 @@ h2 {
 #right_side img {
     float: right;
     margin-left: 20px;
-    max-width: 40%;
-    min-width: 30%;
+    max-width: 30%;
+    height: auto;
+}
+
+#left_side_wider img{
+    float: left;
+    margin-right: 20px;
+    max-width: 30%;
     height: auto;
 }
 
 #justified_text {
     text-align: justify;
+}
+
+#profile_pic img{
+    float: right;
+    margin-left: 20px;
+    max-width: 40%;
+    height: auto;
 }
 
 /* CONTENT PAGE STUDENT 2  -------------------------------------------------------------------------------*/
@@ -244,10 +258,9 @@ h2 {
 
 .content_st2 {
     margin-top: 100px;
-    padding-bottom: 120px;
     margin-right: 50px;
     padding-top: 150px;
-    margin-left: 160px;
+    margin-left: 180px;
 }
 
 /* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
@@ -361,17 +374,21 @@ legend {
 
 /* FOOTER -------------------------------------------------------------------------------------- */
 
+ html, body { /* for footer not having margin */
+    margin: 0;
+    padding: 0;
+}
+
+footer #logo{
+    margin-right: 10px;
+}
+
 footer {
-    position: fixed;
-    margin-top: 30px;
     bottom: 0;
     left: 0;
     background-color: #D4E7C5;
     width: 100%;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
     text-align: center;
     text-decoration: none;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -387,9 +404,10 @@ footer ul {
 }
 
 footer ul li {
-    margin: 0 10px;
-    font-size: 18px;
-    font-weight: bold;
+    margin: 20px 10px 20px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
 }
 
 footer a:link,
