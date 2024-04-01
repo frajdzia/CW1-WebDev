@@ -429,6 +429,10 @@ fieldset {
     text-align: center;
 }
 
+.shadow_box h1{
+    margin-top:0;
+}
+
 .page_editor_links a:link,
 .page_editor_links a:visited {
     color: #42664f;
