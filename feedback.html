@@ -33,7 +33,7 @@
 
                     <span class="separator"></span>
                     <label for="name">*Name:</label>
-                    <input type="text" id="name" name="firstname" placeholder="Enter your name" >
+                    <input type="text" id="name" name="firstname" placeholder="Enter your name">
 
                     <span class="separator"></span>
 
@@ -47,7 +47,7 @@
                         <label><input type="radio" name="visited" value="yes" id="yesVisit"> Yes</label>
                         <label><input type="radio" name="visited" value="no" id="noVisit"> No</label>
                     </fieldset>
-                    
+
                     <span class="separator"></span>
 
                     <fieldset class="questions">
@@ -90,12 +90,13 @@
                     <span class="separator"></span>
 
                     <label for="questions">Aditional questions or requests: </label><br>
-                    <textarea id="questions" name="questions" placeholder="Add your message here..." id="additionalQuestions"></textarea>
+                    <textarea id="questions" name="questions" placeholder="Add your message here..."
+                        id="additionalQuestions"></textarea>
 
                     <span class="separator"></span>
                     <!-- Buttons -->
-               <button class="buttons" id="submit">Submit</button>
-               <input class="buttons" id="reset" type="reset" name="reset" value="Reset Form">
+                    <button class="buttons" id="viewFrom">View Form</button>
+                    <input class="buttons" id="reset" type="reset" name="reset" value="Reset Form">
 
                 </fieldset>
 
@@ -104,30 +105,33 @@
 
         <div id="displayInfo" style="display: none;">
             <h3>Check information before submitting:</h3>
-  
+
             <p><b>Name: </b><span id="storedName"></span></p>
-            <p> <b>Email: </b><span id="storedEmail"></span></p>
-            <p> <b>Was this your first time visiting: </b><span id="storedVisited"></span></p>
-            <p> <b>Was this website informative and easy to navigate through:</b> <span id="storedNavigation"></span></p>
-  
-            <p><b>Suggestions for future improvements: </b><span id="storedSuggestions"></span></p>
-            <p><b>Rating: </b><span id="storedSatisfaction"></span></p>
-            <p><b>Recommending our services?: </b><span id="storedUpdates"></span></p>
-            <p><b>Additional question or requests: </b><span id="storedQuestions"></span></p>
+            <p><b>Email: </b><span id="storedEmail"></span></p>
+            <p><b>Was this your first time visiting: </b><span id="storedVisited"></span></p>
+            <p><b>Navigation experience:</b> <span id="storedNavigation"></span></p>
+            <p><b>Improvement suggestions: </b><span id="storedSuggestions"></span></p>
+            <p><b>Satisfaction scale (1-10): </b><span id="storedSatisfaction"></span></p>
+            <p><b>Updates: </b><span id="storedUpdates"></span></p>
+            <p><b>Additional questions or requests: </b><span id="storedQuestions"></span></p>
             <button class="editButton">Edit Form</button>
             <button class="submitButton" type="submit" value="submit">Submit Form</button>
-       </div>
+        </div>
 
-       <div id="feedbackConfirmation" style="display: none;">
-        <h2>Thank you for your valuable feedback!</h2>
-        <p>We truly appreciate your time and effort in helping us improve our website. Your insights will contribute to making our site even better. Thanks again!</p>
+        <div id="feedbackConfirmation" style="display: none;">
+            <h3>Thank you!</h3>
+            <p>We're grateful for your feedback! Your time and insights are immensely appreciated and will play a
+                significant role in enhancing our website. Once again, thank you for contributing to our continual
+                improvement.</p>
+                <p><a href="./home.html" class="page_editor_links">Go back to home page</a></p>
         </div>
 
     </main>
     <!-- FOOTER SECTION -->
     <footer id="footer">
         <ul>
-            <li><img src="student2_pictures/page_design_pictures/web_dev_logo_cw1.png" alt="logo" id="logo"> © 2024 Climate Action</li>
+            <li><img src="student2_pictures/page_design_pictures/web_dev_logo_cw1.png" alt="logo" id="logo"> © 2024
+                Climate Action</li>
             <li>Page editor:</li>
             <li><a href="./pageEditor_ST2.html" target="_blank" id="pageEditor_ST2">Student 2</a></li>
             <li>Website editors:</li>

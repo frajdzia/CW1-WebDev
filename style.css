@@ -223,13 +223,6 @@ h2 {
     text-align: justify;
 }
 
-#profile_pic img{
-    float: right;
-    margin-left: 20px;
-    max-width: 40%;
-    height: auto;
-}
-
 /* CONTENT PAGE STUDENT 2  -------------------------------------------------------------------------------*/
 .sidenav {
     margin-top: 200px;
@@ -264,27 +257,20 @@ h2 {
 
 /* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
 
-#displayInfo p{
-    padding: 5px;
+.is-empty {
+    background-color: #ffcccc; /* Light red to indicate empty */
 }
 
-#feedbackConfirmation {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    max-width: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+#feedback_form {
+    align-items: center;
     text-align: center;
-    display: none; /* Initially hidden */
-}
-
-#feedbackConfirmation h2 {
-    color: #37532c;
+    position: relative;
+    width: 80%;
+    background-color: #AFC8AD;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #335232;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .feedback_title {
@@ -292,16 +278,15 @@ h2 {
     font-size: 18px;
 }
 
+#feedback_form h3{
+    color:#c15858;
+    text-align: center;
+}
+
 #satisfactionScale label {
-    display: inline-block;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 5px;
-}
-
-#satisfactionScale input[type="radio"] {
-    margin-top: 4px;
 }
 
 textarea {
@@ -317,28 +302,10 @@ fieldset {
     border: none;
 }
 
-#name,
-#email {
+#name,#email {
     background-color: #E1F0DA;
     border-radius: 5px;
     border: none;
-}
-
-#feedback_form {
-    align-items: center;
-    text-align: center;
-    position: relative;
-    width: 80%;
-    background-color: #AFC8AD;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #3c5a3b;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-#feedback_form h3{
-    color:red;
-    text-align: center;
 }
 
 .separator {
@@ -347,20 +314,8 @@ fieldset {
     margin-bottom: 20px;
 }
 
-.rounded-button {
-    padding: 10px 20px;
-    background-color: #88AB8E;
-    color: #E1F0DA;
-    border: solid 1px;
-    border-radius: 15px;
-    cursor: pointer;
-    float: right;
-    font-weight: bold;
-    margin-bottom: 2px;
-    font-weight: bold;
-    margin-right: 46%;
+/* INFORMATION SHOWN BEFORE SUBMIT */
 
-}
 #displayInfo {
     position: fixed;
     top: 50%;
@@ -369,16 +324,52 @@ fieldset {
     z-index: 999;
     max-width: 600px;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px #335232;
+    display: none; /* Initially hidden */
+}
+
+#displayInfo h3, #feedbackConfirmation h3 {
+    text-align: center;
+    font-size:20px;
+}
+
+#displayInfo p{font-size:15px;}
+
+#displayInfo p b{
+    color:#87b28e;
+    text-align: left;
+}
+
+/* FEEDBACK CONFIRMATION AND THANKS */
+
+#feedbackConfirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #335232;
     text-align: center;
     display: none; /* Initially hidden */
 }
 
-.hidden {
-    display: none;
-  }
+#feedbackConfirmation a:link,
+#feedbackConfirmation a:visited {
+    color: #42664f;
+    font-weight: bold;
+    padding: 10px 7px 10px;
+}
+
+#feedbackConfirmation a:hover{color: #87b28e;font-weight: bold;}
+
+
+/* BUTTONS ON FEEDBACK FORM */
 
 .editButton, .submitButton {
     margin-top: 10px;
@@ -394,32 +385,31 @@ fieldset {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    margin:5px;
 }
 
 .editButton {
-    background-color: rgb(228, 193, 118);
+    background-color: #8bf1f3; margin:5px;
 }
 
 .editButton:hover {
     transition: transform .3s ease-in-out;
     transform: scale(1.05);
-    background-color: rgb(216, 179, 78);
+    background-color: #4ed6d8;
 }
 
-.submitButton, #submit {
+.submitButton, #viewFrom {
     background-color: #7ae176;
-
+    margin:5px;
 }
 
-.submitButton:hover, #submit:hover {
+.submitButton:hover, #viewFrom:hover {
     transition: transform .3s ease-in-out;
     transform: scale(1.05);
     background-color: #6bc568;
 }
 
-#reset {
-    background-color: #f49393;
-}
+#reset {background-color: #f49393;}
 
 #reset:hover {
     cursor: pointer;
@@ -429,6 +419,15 @@ fieldset {
 }
 
 /* PAGE EDITOR STUDENT 2 ------------------------------------------------------------------------ */
+
+.shadow_box{
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #335232;
+    text-align: center;
+}
 
 .page_editor_links a:link,
 .page_editor_links a:visited {
@@ -450,9 +449,7 @@ fieldset {
     padding: 0;
 }
 
-footer #logo{
-    margin-right: 10px;
-}
+footer #logo{margin-right: 10px;}
 
 footer {
     bottom: 0;
@@ -485,7 +482,6 @@ footer a:link,
 footer a:visited {
     color: #6e9274;
     text-decoration: none;
-    transition: color 0.3s, background-color 0.3s;
 }
 
 footer a:hover {

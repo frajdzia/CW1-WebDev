@@ -78,7 +78,7 @@ document.querySelectorAll('.sidenav a').forEach(link => {
 window.onload = function() {
     document.getElementById('displayInfo').style.display = 'none';
 
-    document.getElementById('submit').addEventListener('click', submitForm);
+    document.getElementById('viewFrom').addEventListener('click', submitForm);
 
     document.querySelector('.editButton').addEventListener('click', function () {
         document.getElementById('displayInfo').style.display = 'none';
@@ -124,7 +124,6 @@ function submitForm(event) {
     let visited = document.querySelector('input[name="visited"]:checked');
     let navigation = document.querySelector('input[name="navigation"]:checked');
     let satisfaction = document.querySelector('input[name="satisfaction"]:checked');
-
     let suggestions = document.getElementById('suggestions').value.trim();
     let updates = document.querySelector('select[name="updates"]').value.trim();
     let questions = document.getElementById('questions').value.trim();
@@ -172,7 +171,19 @@ function submitForm(event) {
     document.getElementById('displayInfo').style.display = 'block'; 
 }
 
+function showThanks(){
+
+    document.getElementById('feedback_form').style.display = 'none';
+    document.getElementById('displayInfo').style.display = 'none';
+
+    document.getElementById('feedbackConfirmation').style.display = 'block';
+}
+
+
 function openEmailClient() {
+
+    showThanks()
+
     let storedName = localStorage.getItem('name');
     let storedEmail = localStorage.getItem('email');
     let visited = localStorage.getItem('visited');
@@ -186,14 +197,8 @@ function openEmailClient() {
     document.getElementById('displayInfo').style.display = 'none';
 
     document.getElementById('feedbackConfirmation').style.display = 'block';
-    // to change
-    //let mailtoLink = `mailto:munteancorina@proton.me?subject=Feedback&body=Name: ${storedName}%0D%0AEmail: ${storedEmail}%0D%0AFirst Time Visiting: ${visited}%0D%0ANavigation Experience: ${navigation}%0D%0AImprovements: ${suggestions}%0D%0ARating: ${satisfaction}%0D%0AServices Recommended: ${updates}%0D%0AAdditional Questions/Requests: ${questions}`; 
-/////
+    let mailtoLink = `mailto:${storedEmail}?subject=Feedback&body=Hello, here is feedback data you have provided.%0D%0AName: ${storedName}%0D%0AEmail: ${storedEmail}%0D%0AWas this your first time visiting: ${visited}%0D%0AWas this website informative and easy to navigate through: ${navigation}%0D%0AImprovement suggestions: ${suggestions}%0D%0ASatisfaction scale (1-10): ${satisfaction}%0D%0AUpdates: ${updates}%0D%0AAdditional questions or requests: ${questions}`; 
 
     window.open(mailtoLink);
 
-    document.getElementById('feedback_form').style.display = 'none';
-    document.getElementById('displayInfo').style.display = 'none';
-
-    document.getElementById('feedbackConfirmation').style.display = 'block';
 }
