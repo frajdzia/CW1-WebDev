@@ -1,0 +1,19 @@
+body{background-image: url('pictures_ST4/BlackBackground.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+.writing{
+    color:gold;
+    text-align: center;
+}
+.TITLE{
+    padding: 15px;
+    margin: 20px;
+    background-color:black;
+}
+.part2{
+    padding: 15px;
+    margin: 20px;
+    background-color:black;
+}
