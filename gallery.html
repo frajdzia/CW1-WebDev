@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        ClimeChange Gallery
+    </title>
+    <link rel="stylesheet" href="GalleryStyles.css">
+</head>
+
+<body>
+    <nav>
+        <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
+        </div>
+        <ul>
+            <li><a href="./home.html" id="home">Home</a></li>
+            <li><a href="./gallery.html" id="gallery">Gallery</a></li>
+            <li><a href="./shop.html" id="shop">Shop</a></li>
+            <li><a href="./profile.html" id="profile">User profile</a></li>
+            <li><a href="./feedback.html" id="feedback">Feedback</a></li>
+            <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
+            <li><a href="./team.html" id="team">Team</a></li>
+        </ul>
+        <h1 id="sitename">Gallery</h1>
+    </nav>
+    <div class="fullimage" id="fullsimagesquare">
+        <div class="p1">
+            <p id="imageText">a</p>
+        </div>
+        <img id="fullsimage">
+    </div>
+    <div class="images">
+        <div class="image-group">
+            <div>Wildfires</div>
+            <img src="styles_ST4/pictures_ST4/wildfires.jpeg" alt="An image of a wild fire inside a forest"
+                onclick="openfullsimage('styles_ST4/pictures_ST4/wildfires.jpeg', 'Wildfires, also known as forest fires, are uncontrolled fires that rapidly spread across vegetation and forest areas. They can be caused by various factors, including human activities like unattended campfires or discarded cigarettes, and natural occurrences like lightning strikes. Climate change has also been linked to the increasing frequency and intensity of wildfires, as warmer temperatures and drier conditions create a more conducive environment for fires to spread. Wildfires can have devastating effects on both the environment and human communities. They can lead to loss of life, property damage, and significant changes in land composition. Moreover, they contribute to air pollution, releasing harmful pollutants and greenhouse gases into the atmosphere. However, it is important to note that wildfires also play a crucial role in certain ecosystems, helping to clear out dead trees and undergrowth, which can lead to new plant growth.')">
+        </div>
+        <div class="image-group">
+            <div>Pollution</div>
+            <img src="styles_ST4/pictures_ST4/pollution.jpeg" alt="An image of pollution and remains of a city"
+                onclick="openfullsimage(this.src, 'Pollution refers to the introduction of harmful materials into the environment. These pollutants, which can be either physical (such as plastic waste) or chemical (such as industrial emissions), can have detrimental effects on our natural world, including air, water, and land. Air pollution, often caused by the burning of fossil fuels, can lead to respiratory illnesses in humans and can disrupt the life cycles of plants. Water pollution, often a result of industrial waste or plastic debris, can poison aquatic life and make water unsafe for consumption. Land pollution, often caused by unsustainable farming practices or disposal of non-biodegradable waste, can degrade habitats and reduce biodiversity. Pollution is a global problem that requires international cooperation and sustainable practices to solve.')">
+        </div>
+        <div class="image-group">
+            <div>Icecaps melting</div>
+            <img src="styles_ST4/pictures_ST4/icecapsmelting.jpeg" alt="An image of Ice caps melting"
+                onclick="openfullsimage(this.src, 'Ice caps melting is a significant concern in the context of global warming. As the Earths temperature rises due to the increased concentration of greenhouse gases, it leads to the melting of polar ice caps, particularly in the Arctic and Antarctic regions. This melting process contributes to rising sea levels, which can lead to coastal flooding and the loss of habitats for many species. Moreover, the reduction in ice cover can accelerate global warming further because ice reflects sunlight back into space, helping to cool the planet. When ice melts, the darker water or land underneath absorbs more sunlight, heating the Earth’s surface and the air above it. This phenomenon, known as the albedo effect, creates a feedback loop that exacerbates climate change. It’s crucial to address this issue through efforts to reduce greenhouse gas emissions and slow the rate of global warming.')">
+        </div>
+    </div>
+    <script>
+        var fullsimagesquare = document.getElementById("fullsimagesquare");
+        var imageText = document.getElementById("imageText");
+        function openfullsimage(pic, text,) {
+            fullsimagesquare.style.display = "flex";
+            fullsimage.src = pic;
+            imageText.textContent = text;
+        }
+    </script>
+</body>
+<footer class="footer" style="background-color: antiquewhite; text-align: center; padding: 3px;">
+    <p><a href="pageEditor_ST4.html">Page Editor</a></p>
+</footer>
+
+</html>
