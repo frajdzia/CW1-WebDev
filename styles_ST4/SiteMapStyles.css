@@ -1,0 +1,101 @@
+#logo {
+    width: 4vw;
+    border-radius: 50%;
+    float: left;
+    margin-left: 25px;
+    position: relative;
+    display: inline;
+}
+nav {
+    position: absolute;
+    min-height: 0;
+    display: inline;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 10px;
+    text-align: center;
+    z-index: 2;
+    overflow: hidden;
+    float: right;
+    transition: padding 0.3s ease;
+}
+
+#sitename {
+    color: #D4E7C5;
+    font-size: 4vw;
+    padding: 40px;
+    display: block;
+    transition: padding 0.3s ease;
+}
+
+nav a:link,
+nav a:visited {
+    color: #E1F0DA;
+    font-weight: bold;
+    background-color: #6e9274;
+    text-decoration: none;
+    padding: 1vw 0.7vw 1vw;
+}
+
+nav a:hover {
+    color: #FCFFCC;
+    background-color: #AFC8AD;
+    font-weight: bold;
+}
+
+.active {
+    color: #FCFFCC;
+    border-bottom: 3px solid #FCFFCC;
+    border-bottom-color: #FCFFCC;
+    text-decoration: underline;
+}
+
+nav ul {
+    margin-top: 0.5vw;
+    display: flex;
+    float: right;
+    justify-content: space-evenly;
+    padding-right: 1.5vw;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    font-size: 1vw;
+    text-align: center;
+}
+
+nav ul li:first-child a {
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    padding-left: 1.5vw;
+}
+
+nav ul li:last-child a {
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    padding-right: 1.5vw;
+}
+body{background-image: url('bckgr.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: antiquewhite;
+    text-align: center;
+}   
+#svgJS {
+    margin-top: 120px;
+    position: relative; 
+    z-index: 9999;
+    margin-bottom: 20px;
+}
