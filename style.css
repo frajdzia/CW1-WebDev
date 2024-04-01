@@ -201,14 +201,14 @@ h2 {
 #left_side img {
     float: left;
     margin-right: 20px;
-    max-width: 20%;
+    max-width: 15%;
     height: auto;
 }
 
 #right_side img {
     float: right;
     margin-left: 20px;
-    max-width: 30%;
+    max-width: 20%;
     height: auto;
 }
 
