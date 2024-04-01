@@ -6,80 +6,79 @@
     <link rel="stylesheet" href="style.css">
     <title>Checkout</title>
     <style>
-       
-        /* Your CSS styles here */
         .thank-you-message {
             display: none;
         }
 
-        /* Show the thank you message when the URL has #thank-you appended to it */
         .thank-you-message:target {
             display: block;
-        }    
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
         }
-        
+
         nav {
             background-color: #333;
             color: #fff;
             padding: 10px;
         }
-        
+
         nav ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
         }
-        
+
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
-        
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
         }
-        
+
         h1#sitename {
             margin-top: 0;
             text-align: center;
         }
-        
+
         h1 {
             text-align: center;
         }
-        
+
         form {
-            max-width: 400px; /* Decreased width */
-            margin: 20px auto; /* Added margin to center vertically */
+            max-width: 400px; 
+            margin: 20px auto; 
             background-color: #ffffff;
-            padding: 80px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         label {
             display: block;
             margin-bottom: 10px;
             font-weight: bold;
         }
-        
+
         input[type="text"],
         input[type="email"],
-        textarea {
-            width: calc(100% - 20px); /* Adjusted width to account for padding */
+        textarea,
+        select {
+            width: calc(100% - 20px); 
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
         }
-        
+
         input[type="submit"] {
             background-color: #4CAF50;
             color: white;
@@ -89,48 +88,162 @@
             cursor: pointer;
             font-size: 16px;
         }
-        
+
         input[type="submit"]:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-        <!-- NAVIGATION BAR SECTION -->
-    <nav>
-        <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
-        </div>
-        <ul>
-            <li><a href="./home.html" id="home">Home</a></li>
-            <li><a href="./gallery.html" id="gallery">Gallery</a></li>
-            <li><a href="./shop.html" id="shop">Shop</a></li>
-            <li><a href="./profile.html" id="profile">User profile</a></li>
-            <li><a href="./feedback.html" id="feedback">Feedback</a></li>
-            <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
-            <li><a href="./team.html" id="team">Team</a></li>
-        </ul>
-        <h1 id="sitename">Checkout</h1>
-    </nav>
-    <!-- END OF NAVIGATION BAR SECTION -->
-    
-    <form action="#thank-you" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+<!-- NAVIGATION BAR SECTION -->
+<nav>
+    <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
+    </div>
+    <ul>
+        <li><a href="./home.html" id="home">Home</a></li>
+        <li><a href="./gallery.html" id="gallery">Gallery</a></li>
+        <li><a href="./shop.html" id="shop">Shop</a></li>
+        <li><a href="./profile.html" id="profile">User profile</a></li>
+        <li><a href="./feedback.html" id="feedback">Feedback</a></li>
+        <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
+        <li><a href="./team.html" id="team">Team</a></li>
+    </ul>
+    <h1 id="sitename">Checkout</h1>
+</nav>
+<!-- END OF NAVIGATION BAR SECTION -->
+
+<form action="#thank-you" method="POST">
+    <!-- Personal Details -->
+    <h2>Almost there! </h2>
+    <h2>Please finish filling in the form to complete Placing your order</h2>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" required></textarea>
+        <button type="reset">Reset</button>
+        <button type="button">Save Changes</button>
+    </fieldset>
 
-        <input type="submit" value="Place Order">
-    </form>
+    <!-- Billing Address -->
+    <fieldset>
+        <legend>Billing Address</legend>
+        <label for="address1">Address Line 1:</label>
+        <input type="text" id="address1" name="address1" required>
 
-    <!-- Thank You message -->
-    <div id="thank-you" class="thank-you-message">
-        <h2>Thank You!</h2>
-        <p>Your order has been placed. Thank you for your purchase!</p>
-    </div>
+        <label for="address2">Address Line 2:</label>
+        <input type="text" id="address2" name="address2">
+
+        <label for="address3">Address Line 3:</label>
+        <input type="text" id="address3" name="address3">
+
+        <label for="city">Town/City:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode" required>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+
+        <button type="reset">Reset</button>
+        <button type="button">Save Changes</button>
+    </fieldset>
+
+    <!-- Payment Information -->
+    <fieldset>
+        <legend>Payment Information</legend>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="cardholderName">Cardholder Name:</label>
+        <input type="text" id="cardholderName" name="cardholderName" required>
+
+        <label for="expiryDate">Expiry Date (MM/YYYY):</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <button type="reset">Reset</button>
+        <button type="button">Save Changes</button>
+    </fieldset>
+
+    <!-- Contact Details -->
+    <fieldset>
+        <legend>Contact Details</legend>
+        <label for="contactFirstName">First Name:</label>
+        <input type="text" id="contactFirstName" name="contactFirstName" required>
+
+        <label for="contactLastName">Last Name:</label>
+        <input type="text" id="contactLastName" name="contactLastName" required>
+
+        <label for="contactPhone">Phone Number:</label>
+        <input type="tel" id="contactPhone" name="contactPhone" required>
+
+        <label for="contactEmail">Email:</label>
+        <input type="email" id="contactEmail" name="contactEmail" required>
+
+        <button type="reset">Reset</button>
+        <button type="button">Save Changes</button>
+    </fieldset>
+
+    <!-- Payment Button -->
+    <button type="button" id="makePayment">Make Payment</button>
+
+</form>
+
+<!-- Thank You message -->
+<div id="thank-you" class="thank-you-message">
+    <h2>Thank You! Your order has been placed. Thank you for your purchase.</h2>
+</div>
+
+<script>
+    
+    document.getElementById('makePayment').addEventListener('click', function() {
+        if (validateForm()) {
+            document.getElementById('thank-you').style.display = 'block';
+        } else {
+            alert('Please fill in all required fields.');
+        }
+    });
+
+    //Thus part Validate form function
+    function validateForm() {
+        var requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
+        for (var i = 0; i < requiredFields.length; i++) {
+            if (!requiredFields[i].value) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+    <!-- FOOTER SECTION -->
+    <footer id="footer">
+        <ul>
+            <li>Website editors:</li>
+            <li><a href="./pageEditor_ST1.html" target="_blank" id="pageEditor_ST1">Student 1</a></li>
+            <li><a href="./pageEditor_ST2.html" target="_blank" id="pageEditor_ST2">Student 2</a></li>
+            <li><a href="./pageEditor_ST3.html" target="_blank" id="pageEditor_ST3">Student 3</a></li>
+            <li><a href="./pageEditor_ST4.html" target="_blank" id="pageEditor_ST4">Student 4</a></li>
+        </ul>
+    </footer>
+    <script src="js_main.js"></script>
+    <!-- END OF FOOTER SECTION -->
 
 </body>
 </html>
+

@@ -375,20 +375,20 @@
                     const product = this.closest(".product");
                     const sizePrice = parseFloat(product.querySelector("select").value);
                     const color = product.querySelector("input[type='radio']:checked").value;
-                    const price = sizePrice; // Starting price is the size price
+                    const price = sizePrice; // 
                     totalPrice += price;
 
-                    // Construct the product description based on selected options
+                    // This part creates the product description based on selected options
                     const productDescription = `Size: ${sizePrice.toFixed(2)}, Color: ${color}, Price: £${price.toFixed(2)}`;
 
-                    // Create a new list item to display the product description
+                    // This part makes a new list item to display within the product description
                     const productItem = document.createElement("li");
                     productItem.textContent = productDescription;
 
-                    // Add the product to the basket
+                    // This funstion adds the product to the basket
                     orderList.appendChild(productItem);
 
-                    // Update total price display
+                    // This funtion updates total price display each time
                     document.querySelector(".total-price").textContent = `Total Price: £${totalPrice.toFixed(2)}`;
                 });
             });
