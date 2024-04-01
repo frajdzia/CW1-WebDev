@@ -5,7 +5,6 @@
     <title>Feedback</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script src="js_main.js"></script>
 </head>
 
 <body>
@@ -29,29 +28,41 @@
             <form id="feedback_form">
                 <h3>Required fields*</h3>
                 <fieldset>
+
                     <legend class="feedback_title">Feedback Information</legend>
+
                     <span class="separator"></span>
                     <label for="name">*Name:</label>
                     <input type="text" id="name" name="firstname" placeholder="Enter your name" >
+
                     <span class="separator"></span>
+
                     <label for="email">*Email address:</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email">
+
                     <span class="separator"></span>
+
                     <fieldset>
                         <legend class="questions">*Have you visited our website before?</legend>
-                        <label><input type="radio" name="visited" value="yes"> Yes</label>
-                        <label><input type="radio" name="visited" value="no"> No</label>
+                        <label><input type="radio" name="visited" value="yes" id="yesVisit"> Yes</label>
+                        <label><input type="radio" name="visited" value="no" id="noVisit"> No</label>
                     </fieldset>
+                    
                     <span class="separator"></span>
-                    <fieldset class="question">
+
+                    <fieldset class="questions">
                         <legend class="questions">*Was this website informative and easy to navigate?</legend>
-                        <label><input type="radio" name="navigation" value="yes"> Yes</label>
-                        <label><input type="radio" name="navigation" value="no"> No</label>
+                        <label><input type="radio" name="navigation" value="yes" id="yesNavigation"> Yes</label>
+                        <label><input type="radio" name="navigation" value="no" id="noNavigation"> No</label>
                     </fieldset>
+
                     <span class="separator"></span>
+
                     <label for="suggestions">If "no", suggest any improvements:</label><br>
                     <textarea id="suggestions" name="suggestions" placeholder="Add your message here..."></textarea>
+
                     <span class="separator"></span>
+
                     <fieldset>
                         <legend>*How satisfied are you with our services?</legend>
                         <div id="satisfaction_scale">
@@ -67,22 +78,51 @@
                             <label for="r10">10<input type="radio" name="satisfaction" id="r10" value="10"></label>
                         </div>
                     </fieldset>
+
                     <span class="separator"></span>
+
                     <label for="updates">*Would you like to receive updates about the website or any offers:</label><br>
                     <select name="updates" id="updates">
-                        <option value="Yes - by email" selected>Yes - by email</option>
-                        <option value="No">No</option>
+                        <option value="Yes - by email" selected id="yesEmail">Yes - by email</option>
+                        <option value="No" id="noEmail">No</option>
                     </select>
+
                     <span class="separator"></span>
+
                     <label for="questions">Aditional questions or requests: </label><br>
-                    <textarea id="questions" name="questions" placeholder="Add your message here..."></textarea>
+                    <textarea id="questions" name="questions" placeholder="Add your message here..." id="additionalQuestions"></textarea>
+
                     <span class="separator"></span>
-                    <input class="rounded-button"  id="submitBTN" type="submit" value="Submit">
+                    <!-- Buttons -->
+               <button class="buttons" id="submit">Submit</button>
+               <input class="buttons" id="reset" type="reset" name="reset" value="Reset Form">
 
                 </fieldset>
 
             </form>
         </div>
+
+        <div id="displayInfo" style="display: none;">
+            <h3>Check information before submitting:</h3>
+  
+            <p><b>Name: </b><span id="storedName"></span></p>
+            <p> <b>Email: </b><span id="storedEmail"></span></p>
+            <p> <b>Was this your first time visiting: </b><span id="storedVisited"></span></p>
+            <p> <b>Was this website informative and easy to navigate through:</b> <span id="storedNavigation"></span></p>
+  
+            <p><b>Suggestions for future improvements: </b><span id="storedSuggestions"></span></p>
+            <p><b>Rating: </b><span id="storedSatisfaction"></span></p>
+            <p><b>Recommending our services?: </b><span id="storedUpdates"></span></p>
+            <p><b>Additional question or requests: </b><span id="storedQuestions"></span></p>
+            <button class="editButton">Edit Form</button>
+            <button class="submitButton" type="submit" value="submit">Submit Form</button>
+       </div>
+
+       <div id="feedbackConfirmation" style="display: none;">
+        <h2>Thank you for your valuable feedback!</h2>
+        <p>We truly appreciate your time and effort in helping us improve our website. Your insights will contribute to making our site even better. Thanks again!</p>
+        </div>
+
     </main>
     <!-- FOOTER SECTION -->
     <footer id="footer">
@@ -96,7 +136,9 @@
             <li><a href="./pageEditor_ST4.html" target="_blank" id="pageEditor_ST4">Student 4</a></li>
         </ul>
     </footer>
-    <script src="js_main.js"></script>
     <!-- END OF FOOTER SECTION -->
+
+    <script src="js_main.js"></script>
 </body>
+
 </html>

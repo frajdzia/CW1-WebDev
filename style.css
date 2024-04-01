@@ -8,7 +8,6 @@ body {
     color: black;
 }
 
-
 /* NAVIGATION BAR ----------------------------------------------------------------------- */
 
 #logo {
@@ -265,9 +264,32 @@ h2 {
 
 /* FEEDBACK FORM ------------------------------------------------------------------------------------------*/
 
-#feedback_div{
-    max-width: 800px;
-    margin-left: 20%;
+#displayInfo p{
+    padding: 5px;
+}
+
+#feedbackConfirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+#feedbackConfirmation h2 {
+    color: #37532c;
+}
+
+.feedback_title {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #satisfactionScale label {
@@ -278,44 +300,40 @@ h2 {
     margin: 0 5px;
 }
 
-.feedback_title {
-    font-weight: bold;
-    font-size: 18px;
-}
-
 #satisfactionScale input[type="radio"] {
     margin-top: 4px;
 }
 
 textarea {
     display: inline-block;
+    border-radius: 5px;
     background-color: #E1F0DA;
     width: 250px;
     height: 65px;
+    border: none;
 }
 
 fieldset {
     border: none;
 }
-legend {
-    width: auto;
-    margin: 0 auto; 
-    text-align: center; 
-    padding: 0 10px; 
-}
 
 #name,
 #email {
     background-color: #E1F0DA;
+    border-radius: 5px;
+    border: none;
 }
 
 #feedback_form {
     align-items: center;
     text-align: center;
-    display: inline-block;
-    width: 100%;
+    position: relative;
+    width: 80%;
     background-color: #AFC8AD;
     border-radius: 15px;
+    box-shadow: 0 0 10px #3c5a3b;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 #feedback_form h3{
@@ -343,18 +361,71 @@ legend {
     margin-right: 46%;
 
 }
+#displayInfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Initially hidden */
+}
 
-.rounded-button:hover {
-    padding: 10px 20px;
-    border: solid 1px;
-    border-radius: 15px;
+.hidden {
+    display: none;
+  }
+
+.editButton, .submitButton {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
-    float: right;
-    font-weight: bold;
-    margin-bottom: 2px;
-    color: #FCFFCC;
-    background-color: #759572;
-    font-weight: bold;
+}
+
+.buttons{
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.editButton {
+    background-color: rgb(228, 193, 118);
+}
+
+.editButton:hover {
+    transition: transform .3s ease-in-out;
+    transform: scale(1.05);
+    background-color: rgb(216, 179, 78);
+}
+
+.submitButton, #submit {
+    background-color: #7ae176;
+
+}
+
+.submitButton:hover, #submit:hover {
+    transition: transform .3s ease-in-out;
+    transform: scale(1.05);
+    background-color: #6bc568;
+}
+
+#reset {
+    background-color: #f49393;
+}
+
+#reset:hover {
+    cursor: pointer;
+    background-color: #e06969;
+    transition: transform .3s ease-in-out;
+    transform: scale(1.05);
 }
 
 /* PAGE EDITOR STUDENT 2 ------------------------------------------------------------------------ */
