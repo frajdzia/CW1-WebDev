@@ -152,7 +152,7 @@
             padding: 10px;
             border: none;
             border-radius: 3px;
-            background-color: #007bff;
+            background-color: green;
             color: #fff;
             font-size: 16px;
             cursor: pointer;
@@ -161,7 +161,7 @@
         }
         
         .checkout-button:hover {
-            background-color: #0056b3;
+            background-color: darkgreen;
         }
     </style>
 </head>
@@ -180,19 +180,19 @@
             <li><a href="./sitemap.html" id="sitemap">Sitemap</a></li>
             <li><a href="./team.html" id="team">Team</a></li>
         </ul>
-        <h1 id="sitename">Climate Action</h1>
+        <h1 id="sitename">Shop</h1>
     </nav>
     <!-- END OF NAVIGATION BAR SECTION -->
 
     <header>
-        <h1>Product Showcase</h1>
+        <h1>Shop</h1>
     </header>
     <div class="container">
         <!-- Product 1 -->
         <div class="product">
             <img src="coverage/SHOP IMAGES/shop/bottle_1.jpg" alt="Reusable Water Bottle">
-            <h2>Reusable Water Bottle</h2>
-            <p class="description">Description of Product 1</p>
+            <h2>Recycled Aluminium Bottle</h2>
+            <p class="description">A Sleek Accessory For An Active Lifestyle</p>
             <p class="price">£10.00</p>
             <div class="options">
                 <form>
@@ -218,8 +218,8 @@
         <!-- Product 2 -->
         <div class="product">
             <img src="coverage/SHOP IMAGES/shop/bottle_2.jpg" alt="Bamboo Lunchbox">
-            <h2>Bamboo Lunchbox</h2>
-            <p class="description">Description of Product 2</p>
+            <h2>Glass Water Bottle 6OOml</h2>
+            <p class="description">Has A Colourful Protective Non-Slip Sleeve</p>
             <p class="price">£14.00</p>
             <div class="options">
                 <form>
@@ -245,8 +245,8 @@
         <!-- Product 3 -->
         <div class="product">
             <img src="coverage/SHOP IMAGES/Shop/bottle_3.jpg" alt="Bento Lunchbox">
-            <h2>Bento Lunchbox</h2>
-            <p class="description">Description of Product 3</p>
+            <h2>Green Bottle 2 Litre</h2>
+            <p class="description">Stainless Steel - Insulated Epic Canteen </p>
             <p class="price">£16.00</p>
             <div class="options">
                 <form>
@@ -271,9 +271,9 @@
 
         <!-- Product 4 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/shop/bottle_1.jpg" alt="Reusable Water Bottle">
-            <h2>Reusable Water Bottle</h2>
-            <p class="description">Description of Product 4</p>
+            <img src="coverage/SHOP IMAGES/shop/recycled_lunchbox.png" alt="Reusable Water Bottle">
+            <h2>Recycled Lunchbox</h2>
+            <p class="description"> 700 ml Storage Capacity - recycled materials at 62% total recycled content.</p>
             <p class="price">£10.00</p>
             <div class="options">
                 <form>
@@ -298,9 +298,9 @@
 
         <!-- Product 5 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/shop/bottle_10.jpg" alt="Bamboo Lunchbox">
+            <img src="coverage/SHOP IMAGES/shop/lunchbox_bamboo.png" alt="Bamboo Lunchbox">
             <h2>Bamboo Lunchbox</h2>
-            <p class="description">Description of Product 5</p>
+            <p class="description">Eco-friendly made of glass with bamboo lid - 800 ml capacity for ample storage</p>
             <p class="price">£14.00</p>
             <div class="options">
                 <form>
@@ -325,9 +325,9 @@
 
         <!-- Product 6 -->
         <div class="product">
-            <img src="coverage/SHOP IMAGES/Shop/bottle_9.jpg" alt="Bento Lunchbox">
-            <h2>Bento Lunchbox</h2>
-            <p class="description">Description of Product 6</p>
+            <img src="coverage/SHOP IMAGES/Shop/stainless_steel_lunchbox.png" alt="Bento Lunchbox">
+            <h2>Stainless Steel Lunchbox</h2>
+            <p class="description"> High-Quality - Secure side buckles for added protection - 750 ml capacity</p>
             <p class="price">£16.00</p>
             <div class="options">
                 <form>
@@ -375,20 +375,20 @@
                     const product = this.closest(".product");
                     const sizePrice = parseFloat(product.querySelector("select").value);
                     const color = product.querySelector("input[type='radio']:checked").value;
-                    const price = sizePrice; // Starting price is the size price
+                    const price = sizePrice; // 
                     totalPrice += price;
 
-                    // Construct the product description based on selected options
+                    // This part creates the product description based on selected options
                     const productDescription = `Size: ${sizePrice.toFixed(2)}, Color: ${color}, Price: £${price.toFixed(2)}`;
 
-                    // Create a new list item to display the product description
+                    // This part makes a new list item to display within the product description
                     const productItem = document.createElement("li");
                     productItem.textContent = productDescription;
 
-                    // Add the product to the basket
+                    // This funstion adds the product to the basket
                     orderList.appendChild(productItem);
 
-                    // Update total price display
+                    // This funtion updates total price display each time
                     document.querySelector(".total-price").textContent = `Total Price: £${totalPrice.toFixed(2)}`;
                 });
             });

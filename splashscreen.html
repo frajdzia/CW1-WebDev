@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="4;url=home.html">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Splash Screen</title>
+    <style>
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #223f2b; 
+            font-family: Arial, sans-serif; 
+            color: #fff; 
+        }
+
+        /* Container for the splash screen content */
+        .container {
+            text-align: center;
+            max-width: 600px; 
+            padding: 0 20px;
+        }
+
+        /* Loader image */
+        .loader {
+            width: 100px; 
+            height: 100px; 
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #fff; 
+            
+        }
+
+        /* Paragraph styles */
+        p {
+            color: #ccc; 
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* List styles */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            color: #ccc; 
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Website Mission</h1>
+        <p>
+            At the heart of our website lies a noble mission: advocating for climate action. We are fervently dedicated to educating and alerting people about the profound effects of climate change still reverberating through our world today. Our primary goal is not merely to raise awareness, but to inspire action. By illuminating the environmental consequences of our actions, we aim to catalyze a collective movement towards sustainability. We implore everyone to embrace greener habits and make mindful decisions, encouraging the adoption of eco-friendly practices. Through our platform, we aspire to instill a passion for sustainable living, promoting products that tread lightly on our planet – such as the reusable water bottles available in our shop. Together, let us forge a path towards a greener, more sustainable future.
+        </p>
+        <h2>Group Members</h2>
+        <ul>
+            <li>Student 1 - Kavya Sridharan </li>
+            <li>Student 2 - Lidia </li>
+            <li>Student 3 - Kanishka </li>
+            <li>Student 4 - Aleem </li>
+        </ul>
+        <img src="coverage/splashcreen/loader.gif" alt="Loader" class="loader">
+    </div>
+
+     <script>
+
+        setTimeout(function() {
+            window.location.href = 'home.html'; 
+        }, 4000);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
