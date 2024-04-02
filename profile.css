@@ -1,103 +1,6 @@
-/* BODY --------------------------------------------------------------------------------- */
+/* USER PROFILE ----------------------------------------------------------------- */
 
-body {
-    background-color: antiquewhite;
-    font-family: 'Arial', sans-serif;
-    margin: 30px;
-    color: black;
-}
-
-
-/* NAVIGATION BAR ----------------------------------------------------------------------- */
-
-#logo {
-    width: 40px;
-    border-radius: 50%;
-    float: left;
-    margin-left: 25px;
-    position: relative;
-    display: inline;
-}
-
-nav {
-    position: fixed;
-    min-height: 0;
-    display: inline;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-image: url("./nav_background.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 40px 10px;
-    text-align: center;
-    z-index: 2;
-    overflow: hidden;
-    float: right;
-    transition: padding 0.3s ease;
-}
-
-#sitename {
-    color: #D4E7C5;
-    font-size: 60px;
-    padding: 40px;
-    display: block;
-    transition: padding 0.3s ease;
-}
-
-nav a:link,
-nav a:visited {
-    color: #E1F0DA;
-    font-weight: bold;
-    background-color: #6e9274;
-    text-decoration: none;
-    padding: 10px 7px 10px;
-}
-
-nav a:hover {
-    color: #FCFFCC;
-    background-color: #AFC8AD;
-    font-weight: bold;
-}
-
-nav.active {
-    color: #FCFFCC;
-    border-bottom: 3px solid #FCFFCC;
-    border-bottom-color: #FCFFCC;
-    text-decoration: underline;
-}
-
-nav ul {
-    margin-top: 10px;
-    display: flex;
-    float: right;
-    justify-content: space-evenly;
-    padding-right: 40px;
-}
-
-nav ul li {
-    position: relative;
-    display: inline-block;
-    font-size: 18px;
-    text-align: center;
-}
-
-nav ul li:first-child a {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding-left: 20px;
-}
-
-nav ul li:last-child a {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-right: 20px;
-}
-
-/* MAIN PART OF WEBSITE ----------------------------------------------------------------- */
-
-#main {
+main {
     min-height: 100vh;
     margin-top: 100px;
     margin-bottom: 90px;
@@ -117,18 +20,20 @@ h1 {
     color: black;
 }
 
-p {
+h2.text {
+    color: black;
     text-align: center;
+    margin-top: 50px;
 }
 
-.prompt-boxes {
+.promptBoxes {
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 200px;
 }
 
-.prompt-box {
+.promptBox {
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -140,13 +45,13 @@ p {
     background-color:#b4cffa;
 }
 
-.prompt-progress {
+.promptProgress {
     font-weight: bold;
     font-size: 20px;
     margin-bottom:15px;
 }
 
-.prompt-question {
+.promptQuestion {
     border: 1px solid black;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -169,13 +74,13 @@ p {
     
 }
 
-.prompt-buttons {
+.promptButtons {
     display: flex;
     justify-content: space-evenly;
     
 }
 
-.prompt-button {
+.promptButton {
     width: 20%;
     text-align: center;
     background-color:#ceaa96;
@@ -185,13 +90,15 @@ p {
     font-weight: bold;
 }
 
+.button_center{
+    display: flex;
+    justify-content: center;
+}
+
 #start-questionnaire {
-    padding: 20px 20px 20px;
+    padding: 4px;
     font-size: 12px;
-    margin-bottom: 50px;
-    align-items: center;
-    font-style: italic;
-    color: black;
+    margin-bottom: 24px;
 }
 
 .prompt-button:hover {
@@ -240,10 +147,115 @@ p {
     width: 0%;
 }
 
-.pageEditor {
-    align-items: center;
+
+/* CONTENT PAGE -------------------------------------------------------------------------------------- */
+
+h2.right {
+    text-align: right;
+}
+
+.leftside img {
+    float: left;
+    padding-right: 20px;
+    margin-right: 20px;
+    max-width: 25%;
+    height: auto;
+}
+
+.rightside img {
+    float: right;
+    padding: 20px;
+    margin-right: 20px;
+    max-width: 25%;
+    height: auto;
+}
+/* TEAM -------------------------------------------------------------------------------------- */
+
+.container{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+h3 {
     text-align: center;
-    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 375px;
+    background-color: black;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+.team_member_image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.team_member_1,
+.member_2,
+.member_3,
+.member_4 {
+    width: 300px;
+    height: 200px;
+    position: relative; 
+}
+.details_of_members{
+    width: 100%;
+    position: absolute;
+    font-weight: bold;
+    padding-top: 120px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+}
+.name{
+    font-size: 16px;
+}
+.role{
+    font-size: 11px;
+}
+.work{
+    font-size: 14px;
+}
+.team_member_image:hover .overlay{
+    opacity: 0.7; 
+}
+.team_member_image:hover .details_of_members{
+    opacity: 1;
+}
+
+/* PAGE EDITOR -------------------------------------------------------------------------------------- */
+
+.editor {
+    text-align: center;
+}
+
+li.editor {
+    text-align: center;
+    list-style-type: none;
+}
+
+ol.editor {
+    text-align: center;
+    list-style-type: none;
+}
+
+#label1 {
+    padding: 10px;
+    background-color: #D4E7C5;
+    text-align: center;
+}
+
+#label2 {
+    padding: 10px;
+    background-color: #D4E7C5;
+    text-align: center;
 }
 
 /* FOOTER -------------------------------------------------------------------------------------- */
