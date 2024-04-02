@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const sitename = document.getElementById("sitename");
     const navbar = document.querySelector("nav");
 
+
+    //minimises nav bar size when scrolling down and 
+    //returns back to normal when scrolled up
     function scrollFunction() {
         if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
             navbar.style.padding = "10px 10px";
@@ -17,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    //shows footer
     function footerVisibility() {
         if ((window.innerHeight + window.scrollY) >= mainContent.offsetHeight) {
             footer.style.display = 'block';
@@ -25,13 +29,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    //when scrolling executes footer and navigation bar visibility
     window.onscroll = function() {
         scrollFunction();
         footerVisibility();
     };
-    footerVisibility();
+    
     setupEventListeners();
 
+
+    //sets the active page to be underlined (underline works with css)
     const currentLocation = location.href;
     const menuItem = document.querySelectorAll('nav a');
     const menuLength = menuItem.length;
@@ -42,11 +49,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-// Smoothly scrolls to the top
 
-
-
-//Make the content page references centered
+//make the content page references centered
 document.querySelectorAll('.sidenav a').forEach(link => {
     link.addEventListener('click', function(e) {
         //prevent defualt
@@ -57,7 +61,7 @@ document.querySelectorAll('.sidenav a').forEach(link => {
 
         if (targetElement) {
             
-            //Getting the offset to add up to scroll and calc the position to scroll to
+            //getting the offset to add up to scroll and calc the position to scroll to
             // 100 works the best for me
             const offset = 100; 
             const topPos = targetElement.offsetTop - offset;
@@ -71,17 +75,22 @@ document.querySelectorAll('.sidenav a').forEach(link => {
 });
 });
 
+//check if buttons clicked
 function setupEventListeners() {
+
+    //initially hides displayInfo
     const displayInfo = document.getElementById('displayInfo');
     if (displayInfo) {
         displayInfo.style.display = 'none';
     }
 
+    //shows confirmation popup with data provided
     const viewFormButton = document.getElementById('viewFrom');
     if (viewFormButton) {
         viewFormButton.addEventListener('click', submitForm);
     }
 
+    //when clicked it goes back to form to reedit its content
     const editButton = document.querySelector('.editButton');
     if (editButton) {
         editButton.addEventListener('click', function () {
@@ -91,17 +100,18 @@ function setupEventListeners() {
         });
     }
 
+    //submit button that shows thanks and gets you to openEmailClient function
     const submitButton = document.querySelector('.submitButton');
     if (submitButton) {
         submitButton.addEventListener('click', openEmailClient);
     }
 }
 
+    // getting elements from local storage
     let storedName = localStorage.getItem('name');
     let storedEmail = localStorage.getItem('email');
     let storedVisited = localStorage.getItem('visited');
     let storedNavigation = localStorage.getItem('navigation');
-
     let storedSuggestions = localStorage.getItem('suggestions');
     let storedSatisfaction = localStorage.getItem('satisfaction');
     let storedUpdates = localStorage.getItem('updates');
@@ -136,9 +146,6 @@ function setupEventListeners() {
     }
     
 
-
-// 
-
 function submitForm(event) {
     event.preventDefault();
 
@@ -152,12 +159,13 @@ function submitForm(event) {
     let updates = document.querySelector('select[name="updates"]').value.trim();
     let questions = document.getElementById('questions').value.trim();
 
-    // Form validation
+    // form validation
     if (name === '' || email === '' || !visited || !navigation || satisfaction === '' || updates === '') {
         alert('Please fill in all required fields.');
         return;
     }
 
+    //name validation (only letters)
     let namePattern = /^[a-zA-Z\s\'\-]+$/;
     if (!namePattern.test(name)) {
         alert('Please enter a valid name.');
@@ -181,7 +189,7 @@ function submitForm(event) {
     localStorage.setItem('suggestions', suggestions);
     localStorage.setItem('questions', questions);
 
-    // Display provided information
+    // display provided information
     document.getElementById('storedName').textContent = name;
     document.getElementById('storedEmail').textContent = email;
     document.getElementById('storedVisited').textContent = visited.value;
@@ -191,11 +199,14 @@ function submitForm(event) {
     document.getElementById('storedSuggestions').textContent = suggestions;
     document.getElementById('storedQuestions').textContent = questions;
 
-    // Display confirmation popout
+    // display confirmation popup
     document.getElementById('displayInfo').style.display = 'block'; 
 }
 
+// function that shows thanks popup and hides form and confirmation popups
 function showThanks(){
+
+    //hide the feedback form and any displayed confirmation
 
     document.getElementById('feedback_form').style.display = 'none';
     document.getElementById('displayInfo').style.display = 'none';
@@ -205,8 +216,10 @@ function showThanks(){
 
 function openEmailClient() {
 
+    //shows thanks popup after sending feedback form
     showThanks()
 
+    // retrieves feedback data stored in the browser's local storage
     let storedName = localStorage.getItem('name');
     let storedEmail = localStorage.getItem('email');
     let visited = localStorage.getItem('visited');
@@ -216,16 +229,15 @@ function openEmailClient() {
     let updates = localStorage.getItem('updates');
     let questions = localStorage.getItem('questions');
 
-    document.getElementById('feedback_form').style.display = 'none';
-    document.getElementById('displayInfo').style.display = 'none';
-
-    document.getElementById('feedbackConfirmation').style.display = 'block';
+    //goes to email
     let mailtoLink = `mailto:${storedEmail}?subject=Feedback&body=Hello, here is feedback data you have provided.%0D%0AName: ${storedName}%0D%0AEmail: ${storedEmail}%0D%0AWas this your first time visiting: ${visited}%0D%0AWas this website informative and easy to navigate through: ${navigation}%0D%0AImprovement suggestions: ${suggestions}%0D%0ASatisfaction scale (1-10): ${satisfaction}%0D%0AUpdates: ${updates}%0D%0AAdditional questions or requests: ${questions}`; 
 
+    // open the constructed mailto
     window.open(mailtoLink);
 
 }
 
+// smoothly scrolls to the top
 function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
