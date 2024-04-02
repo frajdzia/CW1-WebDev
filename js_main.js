@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         footerVisibility();
     };
     footerVisibility();
+    setupEventListeners();
 
     const currentLocation = location.href;
     const menuItem = document.querySelectorAll('nav a');
@@ -42,9 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 // Smoothly scrolls to the top
-function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
+
+
 
 //Make the content page references centered
 document.querySelectorAll('.sidenav a').forEach(link => {
@@ -71,23 +71,31 @@ document.querySelectorAll('.sidenav a').forEach(link => {
 });
 });
 
+function setupEventListeners() {
+    const displayInfo = document.getElementById('displayInfo');
+    if (displayInfo) {
+        displayInfo.style.display = 'none';
+    }
 
-// from here we work gg
+    const viewFormButton = document.getElementById('viewFrom');
+    if (viewFormButton) {
+        viewFormButton.addEventListener('click', submitForm);
+    }
 
+    const editButton = document.querySelector('.editButton');
+    if (editButton) {
+        editButton.addEventListener('click', function () {
+            if (displayInfo) {
+                displayInfo.style.display = 'none';
+            }
+        });
+    }
 
-window.onload = function() {
-    document.getElementById('displayInfo').style.display = 'none';
-
-    document.getElementById('viewFrom').addEventListener('click', submitForm);
-
-    document.querySelector('.editButton').addEventListener('click', function () {
-        document.getElementById('displayInfo').style.display = 'none';
-    });
-
-    document.querySelector('.submitButton').addEventListener('click', openEmailClient);
-};
-
-    // 
+    const submitButton = document.querySelector('.submitButton');
+    if (submitButton) {
+        submitButton.addEventListener('click', openEmailClient);
+    }
+}
 
     let storedName = localStorage.getItem('name');
     let storedEmail = localStorage.getItem('email');
@@ -99,19 +107,34 @@ window.onload = function() {
     let storedUpdates = localStorage.getItem('updates');
     let storedQuestions = localStorage.getItem('questions');
 
-    //
-
-    if (storedName !== null) {
-        document.getElementById('storedName').textContent = storedName;
-        document.getElementById('storedEmail').textContent = storedEmail;
-        document.getElementById('storedVisited').textContent = storedVisited;
-        document.getElementById('storedNavigation').textContent = storedNavigation;
-
-        document.getElementById('storedSuggestions').textContent = storedSuggestions;
-        document.getElementById('storedSatisfaction').textContent = storedSatisfaction;
-        document.getElementById('storedUpdates').textContent = storedUpdates;
-        document.getElementById('storedQuestions').textContent = storedQuestions;
+    //Checking if elements exist before using them
+    if (storedName != null) {
+        if (document.getElementById('storedName')) {
+            document.getElementById('storedName').textContent = storedName;
+        }
+        if (document.getElementById('storedEmail')) {
+            document.getElementById('storedEmail').textContent = storedEmail;
+        }
+        if (document.getElementById('storedVisited')) {
+            document.getElementById('storedVisited').textContent = storedVisited;
+        }
+        if (document.getElementById('storedNavigation')) {
+            document.getElementById('storedNavigation').textContent = storedNavigation;
+        }
+        if (document.getElementById('storedSuggestions')) {
+            document.getElementById('storedSuggestions').textContent = storedSuggestions;
+        }
+        if (document.getElementById('storedSatisfaction')) {
+            document.getElementById('storedSatisfaction').textContent = storedSatisfaction;
+        }
+        if (document.getElementById('storedUpdates')) {
+            document.getElementById('storedUpdates').textContent = storedUpdates;
+        }
+        if (document.getElementById('storedQuestions')) {
+            document.getElementById('storedQuestions').textContent = storedQuestions;
+        }
     }
+    
 
 
 // 
@@ -119,6 +142,7 @@ window.onload = function() {
 function submitForm(event) {
     event.preventDefault();
 
+    //collecting feedback data
     let name = document.getElementById('name').value.trim();
     let email = document.getElementById('email').value.trim();
     let visited = document.querySelector('input[name="visited"]:checked');
@@ -140,7 +164,7 @@ function submitForm(event) {
         return;
     }
 
-    // Email validation using a simple regular expression
+    // Email validation
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         alert('Please enter a valid email address.');
@@ -157,7 +181,7 @@ function submitForm(event) {
     localStorage.setItem('suggestions', suggestions);
     localStorage.setItem('questions', questions);
 
-    // Display the submitted information
+    // Display provided information
     document.getElementById('storedName').textContent = name;
     document.getElementById('storedEmail').textContent = email;
     document.getElementById('storedVisited').textContent = visited.value;
@@ -167,7 +191,7 @@ function submitForm(event) {
     document.getElementById('storedSuggestions').textContent = suggestions;
     document.getElementById('storedQuestions').textContent = questions;
 
-    // Display the confirmation message
+    // Display confirmation popout
     document.getElementById('displayInfo').style.display = 'block'; 
 }
 
@@ -175,7 +199,6 @@ function showThanks(){
 
     document.getElementById('feedback_form').style.display = 'none';
     document.getElementById('displayInfo').style.display = 'none';
-
     document.getElementById('feedbackConfirmation').style.display = 'block';
 }
 
@@ -201,4 +224,8 @@ function openEmailClient() {
 
     window.open(mailtoLink);
 
+}
+
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
