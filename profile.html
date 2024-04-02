@@ -4,9 +4,12 @@
         <title>User profile</title>
         <meta charset="UTF-8">
         <link href="profile.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet"> <!--PROVIDED BY STUDENT 2 -->
     </head>
     <body>
+        <!--NAVIGATION BAR-->  
         <nav>
+            <div>
             <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
             </div>
             <ul>
@@ -20,89 +23,94 @@
             </ul>
             <h1 id="sitename">User Profile</h1>
         </nav>
-
-        <div id="main">
+        <main>
+        <!--QUESTIONS-->  
             <div>
-                <h1>Press the button below to fill out details about your profile!</h1>
-                <div class="prompt-button" id="start-questionnaire" onclick="start_questionnaire();">
-                    Begin questionnaire
+                <h2 class="text">Press the button below to fill out details about your profile!</h2>
+                <div class="button_center">
+                    <button class="promptButton" id="start-questionnaire" onclick="start_questionnaire();">Begin questionnaire</button>
                 </div>
-                <div class="prompt-boxes">
-                    <div class="prompt-box hidden" id="prompt-step1">
-                        <div class="prompt-progress">
+                <div class="promptBoxes">
+                    <div class="promptBox hidden" id="prompt-step1">
+                        <div class="promptProgress">
                             Step 1, question <span id="prompt-step1-counter">1</span>/<span id="prompt-step1-counter-max">0</span>
                         </div>
-                        <div class="prompt-question" id="question-box-step1">
+                        <div class="promptQuestion" id="question-box-step1">
                             <div class="prompt-question-box">
-                                <span class="prompt-question-box-text" id="question-step1">Do you like pancakes?</span>
+                                <span class="prompt-question-box-text" id="question-step1">Information</span>
                                 <input type="text" id="prompt-question-step1-input" value="">
                             </div>
                         </div>
-                        <div class="prompt-buttons">
-                            <div class="prompt-button" onclick="question_prev(1);">
+                        <div class="promptButtons">
+                            <div class="promptButton" onclick="question_prev(1);">
                                 Prev
                             </div>
-                            <div class="prompt-button" onclick="question_next(1);">
+                            <div class="promptButton" onclick="question_next(1);">
                                 Next
                             </div>
-                            <div class="prompt-button" onclick="question_skip(1);">
+                            <div class="promptButton" onclick="question_skip(1);">
                                 Skip
                             </div>
                         </div>
                     </div>
 
-                    <div class="prompt-box hidden" id="prompt-step2">
-                        <div class="prompt-progress">
+                    <div class="promptBox hidden" id="prompt-step2">
+                        <div class="promptProgress">
                             Step 2, question <span id="prompt-step2-counter">1</span>/<span id="prompt-step2-counter-max">0</span>
                         </div>
-                        <div class="prompt-question" id="question-box-step2">
+                        <div class="promptQuestion" id="question-box-step2">
                             <div class="prompt-question-box">
-                                <span class="prompt-question-box-text" id="question-step2">Do you like pancakes?</span>
+                                <span class="prompt-question-box-text" id="question-step2">Information</span>
                                 <input type="text" id="prompt-question-step2-input" value="">
                             </div>
                         </div>
-                        <div class="prompt-buttons">
-                            <div class="prompt-button" onclick="question_prev(2);">
+                        <div class="promptButtons">
+                            <div class="promptButton" onclick="question_prev(2);">
                                 Prev
                             </div>
-                            <div class="prompt-button" onclick="question_next(2);">
+                            <div class="promptButton" onclick="question_next(2);">
                                 Next
                             </div>
-                            <div class="prompt-button" onclick="question_skip(2);">
+                            <div class="promptButton" onclick="question_skip(2);">
                                 Skip
                             </div>
                         </div>
                     </div>
                     
-                    <div class="prompt-box hidden" id="prompt-step3">
-                        <div class="prompt-progress">
+                    <div class="promptBox hidden" id="prompt-step3">
+                        <div class="promptProgress">
                             Step 3, question <span id="prompt-step3-counter">1</span>/<span id="prompt-step3-counter-max">0</span>
                         </div>
-                        <div class="prompt-question" id="question-box-step3">
+                        <div class="promptQuestion" id="question-box-step3">
                             <div class="prompt-question-box">
-                                <span class="prompt-question-box-text" id="question-step3">Do you like pancakes?</span>
+                                <span class="prompt-question-box-text" id="question-step3">Information</span>
                                 <input type="text" id="prompt-question-step3-input" value="">
                             </div>
                         </div>
-                        <div class="prompt-buttons">
-                            <div class="prompt-button" onclick="question_prev(3);">
+                        <div class="promptButtons">
+                            <div class="promptButton" onclick="question_prev(3);">
                                 Prev
                             </div>
-                            <div class="prompt-button" onclick="question_next(3);">
+                            <div class="promptButton" onclick="question_next(3);">
                                 Next
                             </div>
-                            <div class="prompt-button" onclick="question_skip(3);">
+                            <div class="promptButton" onclick="question_skip(3);">
                                 Skip
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--ANSWERS -->
             <div>
-                <h2>Your user profile</h2>
-                User profile progress: <span id="profile-progress">0</span>%
-                <div class="progress-bar">
-                    <div class="progress-bar-complete" id="progress-bar-value"></div>
+                <h2 class="text">Your user profile</h2>
+                <div class="button_center">
+                    <div class="no_flex">
+                        User profile progress: <span id="profile-progress">0</span>%<br>
+                        <div class="progress-bar">
+                            <div class="progress-bar-complete" id="progress-bar-value"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="answer-boxes">
                     <div class="answer-box hidden" id="step-1-answers">
@@ -110,10 +118,10 @@
                             Step 1 - Personal information
                         </div>
                         <div id="answer-box-1-1" class="empty">
-                            Your name: <span id="answer-1-1"></span>
+                            Your firstname: <span id="answer-1-1"></span>
                         </div>
                         <div id="answer-box-1-2" class="empty">
-                            Your surname: <span id="answer-1-2"></span>
+                            Your lastname: <span id="answer-1-2"></span>
                         </div>
                         <div id="answer-box-1-3" class="empty">  
                             Your age: <span id="answer-1-3"></span>
@@ -121,55 +129,390 @@
                         <div id="answer-box-1-4" class="empty">
                             Your gender: <span id="answer-1-4"></span>
                         </div>
-                        <div id="answer-box-1-5" class="empty">
-                            Terms of Service accepted: <span id="answer-1-5"></span>
-                        </div>
-                        <div id="answer-box-1-6" class="empty">
-                            Privacy Policy accepted: <span id="answer-1-6"></span>
-                        </div>
                     </div>
                     <div class="answer-box hidden" id="step-2-answers">
                         <div class="answer-title">
-                            Step 2 - To be changed
+                            Step 2 - Contacts Details
                         </div>
                         <div id="answer-box-2-1" class="empty">
-                            Likes pancakes: <span id="answer-2-1"></span>
+                            Your call number: <span id="answer-2-1"></span>
                         </div>
                         <div id="answer-box-2-2" class="empty">
-                            Likes pizza: <span id="answer-2-2"></span>
+                            Your Whatsapp number: <span id="answer-2-2"></span>
                         </div>
                         <div id="answer-box-2-3" class="empty">  
-                            Likes waffles: <span id="answer-2-3"></span>
-                        </div>
-                        <div id="answer-box-2-4" class="empty">  
-                            Likes fish: <span id="answer-2-4"></span>
+                            your Email Id: <span id="answer-2-3"></span>
                         </div>
                     </div>
                     <div class="answer-box hidden" id="step-3-answers">
                         <div class="answer-title">
-                            Step 3 - To be changed
+                            Step 3 - Address Details
                         </div>
                         <div id="answer-box-3-1" class="empty">
-                            Likes pancakes: <span id="answer-3-1"></span>
+                            House number: <span id="answer-3-1"></span>
                         </div>
                         <div id="answer-box-3-2" class="empty">
-                            Likes pizza: <span id="answer-3-2"></span>
+                            Street name: <span id="answer-3-2"></span>
+                        </div>
+                        <div id="answer-box-3-3" class="empty">
+                            Postcode: <span id="answer-3-3"></span>
+                        </div>
+                        <div id="answer-box-3-4" class="empty">
+                            Country: <span id="answer-3-4"></span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
+<script>
+var step1_question = 1;
+var step2_question = 1;
+var step3_question = 1;
 
+var step1_questions = ["What is your firstname?", "What is your lastname?", "How old are you?", "What is your gender?"];
+var step2_questions = ["What is your call number?", "What is your Whatsapp number?", "Can you tell your Email Id:"];
+var step3_questions = ["Plz write your H.no.:", "Plz tell your street number:" , "Plz enter the Postcode:" , "Plz enter the country:"];
+
+var step1_answers = [];
+var step2_answers = [];
+var step3_answers = [];
+
+for(var i=0; i<step1_questions.length; i++) {
+    step1_answers.push("");
+}
+
+for(var i=0; i<step2_questions.length; i++) {
+    step2_answers.push("");
+}
+
+for(var i=0; i<step3_questions.length; i++) {
+    step3_answers.push("");
+}
+
+var step1_max_question = step1_questions.length;
+var step2_max_question = step2_questions.length;
+var step3_max_question = step3_questions.length;
+
+var step1_locked = true;
+var step2_locked = true;
+var step3_locked = true;
+
+var answers1_locked = true;
+var answers2_locked = true;
+var answers3_locked = true;
+
+var progress = 0;
+
+function parse_answers() {
+    for(var step=1; step<=3; step++)
+    {
+        switch(step) {
+            case 1:
+                for(var i=0; i<step1_answers.length; i++) {
+                    var answer_id = step+"-"+(i+1);
+                    console.log("answer-box-"+answer_id);
+                    if(step1_answers[i] != "") {
+                        document.getElementById("answer-"+answer_id).innerHTML = step1_answers[i];
+                        document.getElementById("answer-box-"+answer_id).classList.remove("empty");
+                    }
+                    else if(!document.getElementById("answer-box-"+answer_id).classList.contains("empty")) {
+                        document.getElementById("answer-box-"+answer_id).classList.add("empty");
+                    }
+                }
+            break;
+
+            case 2:
+                for(var i=0; i<step2_answers.length; i++) {
+                    var answer_id = step+"-"+(i+1);
+                    console.log("answer-box-"+answer_id);
+                    if(step2_answers[i] != "") {
+                        document.getElementById("answer-"+answer_id).innerHTML = step2_answers[i];
+                        document.getElementById("answer-box-"+answer_id).classList.remove("empty");
+                    }
+                    else if(!document.getElementById("answer-box-"+answer_id).classList.contains("empty")) {
+                        document.getElementById("answer-box-"+answer_id).classList.add("empty");
+                    }
+                }
+            break;
+            
+            case 3:
+                for(var i=0; i<step3_answers.length; i++) {
+                    var answer_id = step+"-"+(i+1);
+                    console.log("answer-box-"+answer_id);
+                    if(step3_answers[i] != "") {
+                        document.getElementById("answer-"+answer_id).innerHTML = step3_answers[i];
+                        document.getElementById("answer-box-"+answer_id).classList.remove("empty");
+                    }
+                    else if(!document.getElementById("answer-box-"+answer_id).classList.contains("empty")) {
+                        document.getElementById("answer-box-"+answer_id).classList.add("empty");
+                    }
+                }
+            break;
+        }
+    }
+}
+
+function check_progress() {
+    var question_amount = step1_questions.length + step2_questions.length + step3_questions.length;
+    var answers_amount = 0;
+
+    var step1_answer_amount = 0;
+    var step2_answer_amount = 0;
+    var step3_answer_amount = 0;
+
+    for(var i=0; i<step1_answers.length; i++) {
+        if(step1_answers[i] != "") {
+            answers_amount += 1;
+            step1_answer_amount += 1;
+        }
+    }
+    
+    for(var i=0; i<step2_answers.length; i++) {
+        if(step2_answers[i] != "") {
+            answers_amount += 1;
+            step2_answer_amount += 1;
+        }
+    }
+    
+    for(var i=0; i<step3_answers.length; i++) {
+        if(step3_answers[i] != "") {
+            answers_amount += 1;
+            step3_answer_amount += 1;
+        }
+    }
+
+    if(step1_answer_amount <= 0) {
+        answers1_locked = true;
+    } else {
+        answers1_locked = false;
+    }
+
+    if(step2_answer_amount <= 0) {
+        answers2_locked = true;
+    } else {
+        answers2_locked = false;
+    }
+
+    if(step3_answer_amount <= 0) {
+        answers3_locked = true;
+    } else {
+        answers3_locked = false;
+    }
+
+    progress = answers_amount / question_amount;
+
+    document.getElementById("profile-progress").innerHTML = Math.round(progress*100);
+    document.getElementById("progress-bar-value").style.width = Math.round(progress*100)+"%";
+}
+
+function update_content() {
+    document.getElementById("prompt-step1-counter").innerHTML = step1_question;
+    document.getElementById("prompt-step2-counter").innerHTML = step2_question;
+    document.getElementById("prompt-step3-counter").innerHTML = step3_question;
+
+    document.getElementById("prompt-step1-counter-max").innerHTML = step1_max_question;
+    document.getElementById("prompt-step2-counter-max").innerHTML = step2_max_question;
+    document.getElementById("prompt-step3-counter-max").innerHTML = step3_max_question;
+
+    document.getElementById("question-step1").innerHTML = step1_questions[step1_question-1];
+    document.getElementById("question-step2").innerHTML = step2_questions[step2_question-1];
+    document.getElementById("question-step3").innerHTML = step3_questions[step3_question-1];
+
+    if(step1_locked == false) {
+        document.getElementById("prompt-step1").classList.remove("hidden");
+    }
+
+    if(step2_locked == false) {
+        document.getElementById("prompt-step2").classList.remove("hidden");
+    }
+
+    if(step3_locked == false) {
+        document.getElementById("prompt-step3").classList.remove("hidden");
+    }
+
+    if(answers1_locked == false) {
+        document.getElementById("step-1-answers").classList.remove("hidden");
+    } else if(!document.getElementById("step-1-answers").classList.contains("hidden")) {
+            document.getElementById("step-1-answers").classList.add("hidden");
+    }
+
+    if(answers2_locked == false) {
+        document.getElementById("step-2-answers").classList.remove("hidden");
+    } else if(!document.getElementById("step-2-answers").classList.contains("hidden")) {
+        document.getElementById("step-2-answers").classList.add("hidden");
+    }
+
+    if(answers3_locked == false) {
+        document.getElementById("step-3-answers").classList.remove("hidden");
+    } else if(!document.getElementById("step-3-answers").classList.contains("hidden")) {
+        document.getElementById("step-3-answers").classList.add("hidden");
+    }
+
+    check_progress();
+    parse_answers();
+}
+
+function start_questionnaire() {
+    step1_locked = false;
+
+    update_content();
+}
+
+function question_prev(step) {
+    switch(step) {
+        case 1:
+            step1_question -= 1;
+            if(step1_question >= 1)
+                document.getElementById("prompt-question-step1-input").value = step1_answers[step1_question-1];
+            document.getElementById("question-box-step1").style.border = "1px solid black";
+            break;
+        case 2:
+            step2_question -= 1;
+            if(step2_question >= 1)
+                document.getElementById("prompt-question-step2-input").value = step2_answers[step2_question-1];
+            document.getElementById("question-box-step2").style.border = "1px solid black";
+            break;
+        case 3:
+            step3_question -= 1;
+            if(step3_question >= 1)
+                document.getElementById("prompt-question-step3-input").value = step3_answers[step3_question-1];
+            document.getElementById("question-box-step3").style.border = "1px solid black";
+            break;
+    }
+
+    if(step1_question < 1)
+    step1_question = 1;
+    if(step2_question < 1)
+    step2_question = 1;
+    if(step3_question < 1)
+    step3_question = 1;
+
+    update_content();
+}
+
+function question_next(step) {
+    var is_answer = false;
+
+    switch(step) {
+        case 1:
+        step1_answers[step1_question-1] = document.getElementById("prompt-question-step1-input").value;
+        if(document.getElementById("prompt-question-step1-input").value != "") {
+            is_answer = true;
+            document.getElementById("question-box-step1").style.border = "1px solid black";
+        } else {
+            document.getElementById("question-box-step1").style.border = "1px solid red";
+            alert("Please answer the question or press \"Skip\" to skip it.");
+        }
+        break;
+
+        case 2:
+        step2_answers[step2_question-1] = document.getElementById("prompt-question-step2-input").value;
+        if(document.getElementById("prompt-question-step2-input").value != "") {
+            is_answer = true;
+            document.getElementById("question-box-step2").style.border = "1px solid black";
+        } else {
+            document.getElementById("question-box-step2").style.border = "1px solid red";
+            alert("Please answer the question or press \"Skip\" to skip it.");
+        }
+        break;
+
+        case 3:
+        step3_answers[step3_question-1] = document.getElementById("prompt-question-step3-input").value;
+        if(document.getElementById("prompt-question-step3-input").value != "") {
+            is_answer = true;
+            document.getElementById("question-box-step3").style.border = "1px solid black";
+        } else {
+            document.getElementById("question-box-step3").style.border = "1px solid red";
+            alert("Please answer the question or press \"Skip\" to skip it.");
+        }
+        break;
+    }
+
+    if(is_answer) {
+        question_skip(step);
+    }
+    update_content();
+}
+
+function question_skip(step) {
+    switch(step) {
+        case 1:
+            step1_question += 1;
+            if(step1_question <= step1_max_question)
+                document.getElementById("prompt-question-step1-input").value = step1_answers[step1_question-1];
+            document.getElementById("question-box-step1").style.border = "1px solid black";
+            break;
+        case 2:
+            step2_question += 1;
+            if(step2_question <= step2_max_question)
+                document.getElementById("prompt-question-step2-input").value = step2_answers[step2_question-1];
+            document.getElementById("question-box-step2").style.border = "1px solid black";
+            break;
+        case 3:
+            step3_question += 1;
+            if(step3_question <= step3_max_question)
+                document.getElementById("prompt-question-step3-input").value = step3_answers[step3_question-1];
+            document.getElementById("question-box-step3").style.border = "1px solid black";
+            break;
+    }
+
+    if(step1_question > step1_max_question) {
+        step2_locked = false;
+    }
+
+    if(step2_question > step2_max_question) {
+        step3_locked = false;
+    }
+
+    if(step1_question > step1_max_question)
+    step1_question = step1_max_question;
+    if(step2_question > step2_max_question)
+    step2_question = step2_max_question;
+    if(step3_question > step3_max_question)
+    step3_question = step3_max_question;
+
+    update_content();
+}
+
+document.getElementById("prompt-question-step2-input-number").addEventListener("input", function() {
+    var inputValue = this.value.trim(); // Remove leading and trailing spaces
+
+    // Check if the input value is a valid number
+    if (isNaN(inputValue)) {
+        this.value = ""; // Clear the input field if it's not a valid number
+        alert("Please enter a valid number for the call number.");
+    }
+});
+
+document.getElementById("prompt-question-step2-input-email").addEventListener("input", function() {
+    var inputValue = this.value.trim(); // Remove leading and trailing spaces
+
+    // Check if the input value contains an "@" symbol (likely an email)
+    if (!inputValue.includes("@")) {
+        this.value = ""; // Clear the input field if it doesn't contain an "@" symbol
+        alert("Please enter a valid email address for the email.");
+    }
+});
+
+function begin() {
+    document.getElementById("prompt-question-step1-input").value = step1_answers[step1_question-1];
+    document.getElementById("prompt-question-step2-input").value = step2_answers[step2_question-1];
+    document.getElementById("prompt-question-step3-input").value = step3_answers[step3_question-1]; 
+
+    check_progress();    
+}
+
+begin();
+</script>
+
+        <!--PAGE EDITOR--> 
         <footer id="footer">
             <ul>
-                <li>Page editors:</li>
-                <li><a href="./pageEditor_ST1.html" id="pageEditor_ST1">Student 1</a></li>
-                <li><a href="./pageEditor_ST2.html" id="pageEditor_ST2">Student 2</a></li>
-                <li><a href="./pageEditor _ST3.html" id="pageEditor_ST3">Student 3</a></li>
-                <li><a href="./pageEditor_ST4.html" id="pageEditor_ST4">Student 4</a></li>
+                <li>Page editor:</li>
+                <li><a href="./pageEditor_ST3.html" id="pageEditor_ST3">Student 1</a></li>
             </ul>
         </footer>
-
-        <script src="profile.js"></script>
+        <!--JAVA SCRIPT-->  
+        <script src="js_main.js"></script> <!--PROVIDED BY STUDENT 2-->  
     </body>
 </html>
