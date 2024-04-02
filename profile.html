@@ -4,9 +4,12 @@
         <title>User profile</title>
         <meta charset="UTF-8">
         <link href="profile.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet"> <!--PROVIDED BY STUDENT 2 -->
     </head>
     <body>
+        <!--NAVIGATION BAR-->  
         <nav>
+            <div>
             <img src="web_dev_logo_cw1.png" alt="logo" id="logo">
             </div>
             <ul>
@@ -20,89 +23,94 @@
             </ul>
             <h1 id="sitename">User Profile</h1>
         </nav>
-
-        <div id="main">
+        <main>
+        <!--QUESTIONS-->  
             <div>
-                <h1>Press the button below to fill out details about your profile!</h1>
-                <div class="prompt-button" id="start-questionnaire" onclick="start_questionnaire();">
-                    Begin questionnaire
+                <h2 class="text">Press the button below to fill out details about your profile!</h2>
+                <div class="button_center">
+                    <button class="promptButton" id="start-questionnaire" onclick="start_questionnaire();">Begin questionnaire</button>
                 </div>
-                <div class="prompt-boxes">
-                    <div class="prompt-box hidden" id="prompt-step1">
-                        <div class="prompt-progress">
+                <div class="promptBoxes">
+                    <div class="promptBox hidden" id="prompt-step1">
+                        <div class="promptProgress">
                             Step 1, question <span id="prompt-step1-counter">1</span>/<span id="prompt-step1-counter-max">0</span>
                         </div>
-                        <div class="prompt-question" id="question-box-step1">
+                        <div class="promptQuestion" id="question-box-step1">
                             <div class="prompt-question-box">
-                                <span class="prompt-question-box-text" id="question-step1">Do you like pancakes?</span>
+                                <span class="prompt-question-box-text" id="question-step1">Information</span>
                                 <input type="text" id="prompt-question-step1-input" value="">
                             </div>
                         </div>
-                        <div class="prompt-buttons">
-                            <div class="prompt-button" onclick="question_prev(1);">
+                        <div class="promptButtons">
+                            <div class="promptButton" onclick="question_prev(1);">
                                 Prev
                             </div>
-                            <div class="prompt-button" onclick="question_next(1);">
+                            <div class="promptButton" onclick="question_next(1);">
                                 Next
                             </div>
-                            <div class="prompt-button" onclick="question_skip(1);">
+                            <div class="promptButton" onclick="question_skip(1);">
                                 Skip
                             </div>
                         </div>
                     </div>
 
-                    <div class="prompt-box hidden" id="prompt-step2">
-                        <div class="prompt-progress">
+                    <div class="promptBox hidden" id="prompt-step2">
+                        <div class="promptProgress">
                             Step 2, question <span id="prompt-step2-counter">1</span>/<span id="prompt-step2-counter-max">0</span>
                         </div>
-                        <div class="prompt-question" id="question-box-step2">
+                        <div class="promptQuestion" id="question-box-step2">
                             <div class="prompt-question-box">
-                                <span class="prompt-question-box-text" id="question-step2">Do you like pancakes?</span>
+                                <span class="prompt-question-box-text" id="question-step2">Information</span>
                                 <input type="text" id="prompt-question-step2-input" value="">
                             </div>
                         </div>
-                        <div class="prompt-buttons">
-                            <div class="prompt-button" onclick="question_prev(2);">
+                        <div class="promptButtons">
+                            <div class="promptButton" onclick="question_prev(2);">
                                 Prev
                             </div>
-                            <div class="prompt-button" onclick="question_next(2);">
+                            <div class="promptButton" onclick="question_next(2);">
                                 Next
                             </div>
-                            <div class="prompt-button" onclick="question_skip(2);">
+                            <div class="promptButton" onclick="question_skip(2);">
                                 Skip
                             </div>
                         </div>
                     </div>
                     
-                    <div class="prompt-box hidden" id="prompt-step3">
-                        <div class="prompt-progress">
+                    <div class="promptBox hidden" id="prompt-step3">
+                        <div class="promptProgress">
                             Step 3, question <span id="prompt-step3-counter">1</span>/<span id="prompt-step3-counter-max">0</span>
                         </div>
-                        <div class="prompt-question" id="question-box-step3">
+                        <div class="promptQuestion" id="question-box-step3">
                             <div class="prompt-question-box">
-                                <span class="prompt-question-box-text" id="question-step3">Do you like pancakes?</span>
+                                <span class="prompt-question-box-text" id="question-step3">Information</span>
                                 <input type="text" id="prompt-question-step3-input" value="">
                             </div>
                         </div>
-                        <div class="prompt-buttons">
-                            <div class="prompt-button" onclick="question_prev(3);">
+                        <div class="promptButtons">
+                            <div class="promptButton" onclick="question_prev(3);">
                                 Prev
                             </div>
-                            <div class="prompt-button" onclick="question_next(3);">
+                            <div class="promptButton" onclick="question_next(3);">
                                 Next
                             </div>
-                            <div class="prompt-button" onclick="question_skip(3);">
+                            <div class="promptButton" onclick="question_skip(3);">
                                 Skip
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--ANSWERS -->
             <div>
-                <h2>Your user profile</h2>
-                User profile progress: <span id="profile-progress">0</span>%
-                <div class="progress-bar">
-                    <div class="progress-bar-complete" id="progress-bar-value"></div>
+                <h2 class="text">Your user profile</h2>
+                <div class="button_center">
+                    <div class="no_flex">
+                        User profile progress: <span id="profile-progress">0</span>%<br>
+                        <div class="progress-bar">
+                            <div class="progress-bar-complete" id="progress-bar-value"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="answer-boxes">
                     <div class="answer-box hidden" id="step-1-answers">
@@ -110,10 +118,10 @@
                             Step 1 - Personal information
                         </div>
                         <div id="answer-box-1-1" class="empty">
-                            Your name: <span id="answer-1-1"></span>
+                            Your firstname: <span id="answer-1-1"></span>
                         </div>
                         <div id="answer-box-1-2" class="empty">
-                            Your surname: <span id="answer-1-2"></span>
+                            Your lastname: <span id="answer-1-2"></span>
                         </div>
                         <div id="answer-box-1-3" class="empty">  
                             Your age: <span id="answer-1-3"></span>
@@ -121,55 +129,50 @@
                         <div id="answer-box-1-4" class="empty">
                             Your gender: <span id="answer-1-4"></span>
                         </div>
-                        <div id="answer-box-1-5" class="empty">
-                            Terms of Service accepted: <span id="answer-1-5"></span>
-                        </div>
-                        <div id="answer-box-1-6" class="empty">
-                            Privacy Policy accepted: <span id="answer-1-6"></span>
-                        </div>
                     </div>
                     <div class="answer-box hidden" id="step-2-answers">
                         <div class="answer-title">
-                            Step 2 - To be changed
+                            Step 2 - Contacts Details
                         </div>
                         <div id="answer-box-2-1" class="empty">
-                            Likes pancakes: <span id="answer-2-1"></span>
+                            Your call number: <span id="answer-2-1"></span>
                         </div>
                         <div id="answer-box-2-2" class="empty">
-                            Likes pizza: <span id="answer-2-2"></span>
+                            Your Whatsapp number: <span id="answer-2-2"></span>
                         </div>
                         <div id="answer-box-2-3" class="empty">  
-                            Likes waffles: <span id="answer-2-3"></span>
-                        </div>
-                        <div id="answer-box-2-4" class="empty">  
-                            Likes fish: <span id="answer-2-4"></span>
+                            your Email Id: <span id="answer-2-3"></span>
                         </div>
                     </div>
                     <div class="answer-box hidden" id="step-3-answers">
                         <div class="answer-title">
-                            Step 3 - To be changed
+                            Step 3 - Address Details
                         </div>
                         <div id="answer-box-3-1" class="empty">
-                            Likes pancakes: <span id="answer-3-1"></span>
+                            House number: <span id="answer-3-1"></span>
                         </div>
                         <div id="answer-box-3-2" class="empty">
-                            Likes pizza: <span id="answer-3-2"></span>
+                            Street name: <span id="answer-3-2"></span>
+                        </div>
+                        <div id="answer-box-3-3" class="empty">
+                            Postcode: <span id="answer-3-3"></span>
+                        </div>
+                        <div id="answer-box-3-4" class="empty">
+                            Country: <span id="answer-3-4"></span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </main>
+        <!--PAGE EDITOR--> 
         <footer id="footer">
             <ul>
-                <li>Page editors:</li>
-                <li><a href="./pageEditor_ST1.html" id="pageEditor_ST1">Student 1</a></li>
-                <li><a href="./pageEditor_ST2.html" id="pageEditor_ST2">Student 2</a></li>
-                <li><a href="./pageEditor _ST3.html" id="pageEditor_ST3">Student 3</a></li>
-                <li><a href="./pageEditor_ST4.html" id="pageEditor_ST4">Student 4</a></li>
+                <li>Page editor:</li>
+                <li><a href="./pageEditor_ST3.html" id="pageEditor_ST3">Student 1</a></li>
             </ul>
         </footer>
-
+        <!--JAVA SCRIPT-->  
         <script src="profile.js"></script>
+        <script src="js_main.js"></script> <!--PROVIDED BY STUDENT 2-->  
     </body>
 </html>
