@@ -444,10 +444,14 @@ fieldset {
 }
 
 .shadow_box h1{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
-.shadow_box h4{ margin-top:10px;}
+#bold_txt{
+    font-weight: bold;
+    font-size: 18px;
+    margin:5px auto;
+}
 
 .shadow_box ol li{
     text-align: left;
